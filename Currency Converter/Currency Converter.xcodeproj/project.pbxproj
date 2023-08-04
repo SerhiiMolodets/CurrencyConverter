@@ -20,6 +20,14 @@
 		08ECA96E2A7D8975003C5799 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA96D2A7D8975003C5799 /* WalletViewController.swift */; };
 		08ECA9702A7D8982003C5799 /* WalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA96F2A7D8982003C5799 /* WalletViewController.storyboard */; };
 		08ECA9732A7D8DB0003C5799 /* UIColoro+appColoros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */; };
+		08ECA9762A7D9028003C5799 /* CurrencyListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9752A7D9028003C5799 /* CurrencyListCoordinator.swift */; };
+		08ECA9792A7D90F5003C5799 /* CurrencyListSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */; };
+		08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */; };
+		08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA97E2A7D972A003C5799 /* BidsViewController.swift */; };
+		08ECA9812A7D9735003C5799 /* BidsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */; };
+		08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */; };
+		08ECA9872A7D98F9003C5799 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */; };
+		08ECA9892A7D9942003C5799 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +46,14 @@
 		08ECA96D2A7D8975003C5799 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		08ECA96F2A7D8982003C5799 /* WalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletViewController.storyboard; sourceTree = "<group>"; };
 		08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColoro+appColoros.swift"; sourceTree = "<group>"; };
+		08ECA9752A7D9028003C5799 /* CurrencyListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListCoordinator.swift; sourceTree = "<group>"; };
+		08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListSwiftUIView.swift; sourceTree = "<group>"; };
+		08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsCoordinator.swift; sourceTree = "<group>"; };
+		08ECA97E2A7D972A003C5799 /* BidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsViewController.swift; sourceTree = "<group>"; };
+		08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BidsViewController.storyboard; sourceTree = "<group>"; };
+		08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +113,10 @@
 				08ECA95C2A7D805A003C5799 /* Coordinator.swift */,
 				08ECA95E2A7D80A9003C5799 /* AppCoordinator.swift */,
 				08ECA9642A7D8613003C5799 /* MainTabBar */,
+				08ECA9742A7D9000003C5799 /* CurrencyListScene */,
 				08ECA9662A7D8718003C5799 /* WalletScene */,
+				08ECA97A2A7D9266003C5799 /* BidsScene */,
+				08ECA9822A7D98A3003C5799 /* SettingsScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -105,8 +124,8 @@
 		08ECA9662A7D8718003C5799 /* WalletScene */ = {
 			isa = PBXGroup;
 			children = (
-				08ECA96C2A7D8955003C5799 /* View */,
 				08ECA9672A7D873A003C5799 /* WalletCoordinator.swift */,
+				08ECA96C2A7D8955003C5799 /* View */,
 			);
 			path = WalletScene;
 			sourceTree = "<group>";
@@ -134,6 +153,59 @@
 				08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08ECA9742A7D9000003C5799 /* CurrencyListScene */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9752A7D9028003C5799 /* CurrencyListCoordinator.swift */,
+				08ECA9772A7D90CC003C5799 /* View */,
+			);
+			path = CurrencyListScene;
+			sourceTree = "<group>";
+		};
+		08ECA9772A7D90CC003C5799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08ECA97A2A7D9266003C5799 /* BidsScene */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */,
+				08ECA97B2A7D928C003C5799 /* View */,
+			);
+			path = BidsScene;
+			sourceTree = "<group>";
+		};
+		08ECA97B2A7D928C003C5799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA97E2A7D972A003C5799 /* BidsViewController.swift */,
+				08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08ECA9822A7D98A3003C5799 /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */,
+				08ECA9832A7D98C0003C5799 /* View */,
+			);
+			path = SettingsScene;
+			sourceTree = "<group>";
+		};
+		08ECA9832A7D98C0003C5799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */,
+				08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08ECA9702A7D8982003C5799 /* WalletViewController.storyboard in Resources */,
+				08ECA9812A7D9735003C5799 /* BidsViewController.storyboard in Resources */,
+				08ECA9892A7D9942003C5799 /* SettingsViewController.storyboard in Resources */,
 				08ECA9552A7D7F01003C5799 /* LaunchScreen.storyboard in Resources */,
 				08ECA9522A7D7F01003C5799 /* Assets.xcassets in Resources */,
 			);
@@ -214,9 +288,15 @@
 				08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */,
 				08ECA96E2A7D8975003C5799 /* WalletViewController.swift in Sources */,
 				08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */,
+				08ECA9872A7D98F9003C5799 /* SettingsViewController.swift in Sources */,
 				08ECA9682A7D873A003C5799 /* WalletCoordinator.swift in Sources */,
+				08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */,
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
+				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
+				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,
+				08ECA9792A7D90F5003C5799 /* CurrencyListSwiftUIView.swift in Sources */,
 				08ECA9732A7D8DB0003C5799 /* UIColoro+appColoros.swift in Sources */,
+				08ECA9762A7D9028003C5799 /* CurrencyListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

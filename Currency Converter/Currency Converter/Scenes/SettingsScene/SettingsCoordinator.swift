@@ -1,5 +1,5 @@
 //
-//  WalletCoordinator.swift
+//  SettingsCoordinator.swift
 //  Currency Converter
 //
 //  Created by Serhii Molodets on 04.08.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WalletCoordinator: Coordinator {
+class SettingsCoordinator: Coordinator {
     
     // MARK: - Properties
     let rootController: UINavigationController
@@ -18,19 +18,19 @@ class WalletCoordinator: Coordinator {
     }
 
     override func start() {
-        openWalletController()
+        openSettingsController()
         addChildCoordinator(self)
     }
-    
+
     override func finish() {
         removeChildCoordinator(self)
         rootController.removeFromParent()
     }
     
     // MARK: - Navigation funcs
-    private func openWalletController() {
-        let viewController = WalletViewController.instantiate(coordinator: self)
-        rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.wallet.image, tag: 1)
+    private func openSettingsController() {
+        let viewController = SettingsViewController.instantiate(coordinator: self)
+        rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.settings.image, tag: 3)
         rootController.pushViewController(viewController, animated: true)
     }
 

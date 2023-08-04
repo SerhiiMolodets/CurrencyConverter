@@ -1,5 +1,5 @@
 //
-//  WalletCoordinator.swift
+//  BidsCoordinator.swift
 //  Currency Converter
 //
 //  Created by Serhii Molodets on 04.08.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WalletCoordinator: Coordinator {
+class BidsCoordinator: Coordinator {
     
     // MARK: - Properties
     let rootController: UINavigationController
@@ -18,7 +18,7 @@ class WalletCoordinator: Coordinator {
     }
 
     override func start() {
-        openWalletController()
+        openBidsController()
         addChildCoordinator(self)
     }
     
@@ -28,9 +28,9 @@ class WalletCoordinator: Coordinator {
     }
     
     // MARK: - Navigation funcs
-    private func openWalletController() {
-        let viewController = WalletViewController.instantiate(coordinator: self)
-        rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.wallet.image, tag: 1)
+    private func openBidsController() {
+        let viewController = BidsViewController.instantiate(coordinator: self)
+        rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.bids.image, tag: 2)
         rootController.pushViewController(viewController, animated: true)
     }
 

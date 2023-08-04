@@ -17,6 +17,8 @@ class MainTabBarViewController: UITabBarController {
         self.viewControllers = [UIViewController()]
         self.viewControllers = []
         tabBar.backgroundColor = .white
+        tabBar.layer.borderWidth = 1
+        tabBar.layer.borderColor = UIColor.tabBarUnselected.cgColor
         tabBar.tintColor = .tabBarSelected
         tabBar.unselectedItemTintColor = .tabBarUnselected
     }

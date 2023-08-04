@@ -1,13 +1,14 @@
 //
-//  WalletCoordinator.swift
+//  CurrencyListCoordinator.swift
 //  Currency Converter
 //
 //  Created by Serhii Molodets on 04.08.2023.
 //
 
 import UIKit
+import SwiftUI
 
-class WalletCoordinator: Coordinator {
+class CurrencyListCoordinator: Coordinator {
     
     // MARK: - Properties
     let rootController: UINavigationController
@@ -18,7 +19,7 @@ class WalletCoordinator: Coordinator {
     }
 
     override func start() {
-        openWalletController()
+        openCurrencyListController()
         addChildCoordinator(self)
     }
     
@@ -28,9 +29,12 @@ class WalletCoordinator: Coordinator {
     }
     
     // MARK: - Navigation funcs
-    private func openWalletController() {
-        let viewController = WalletViewController.instantiate(coordinator: self)
-        rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.wallet.image, tag: 1)
+    private func openCurrencyListController() {
+        let viewController = UIHostingController(rootView: CurrencyListSwiftUIView())
+        rootController.tabBarItem = UITabBarItem(title: "Second",
+                                                 image: nil,
+                                                 selectedImage: nil)
+        rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.currencyList.image, tag: 0)
         rootController.pushViewController(viewController, animated: true)
     }
 

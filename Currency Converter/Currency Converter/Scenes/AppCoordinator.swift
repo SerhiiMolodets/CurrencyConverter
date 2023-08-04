@@ -24,7 +24,7 @@ class AppCoordinator: Coordinator {
         openMainTabBar()
         window.makeKeyAndVisible()
     }
-    // MARK: - Navigation func
+    // MARK: - Navigation funcs
     private func openMainTabBar() {
         let tabBarCoordinator = MainTabBarCoordinator(MainTabBarViewController())
         window.rootViewController = tabBarCoordinator.rootTabBarController
