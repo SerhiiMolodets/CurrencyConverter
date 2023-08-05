@@ -28,6 +28,12 @@
 		08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */; };
 		08ECA9872A7D98F9003C5799 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */; };
 		08ECA9892A7D9942003C5799 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */; };
+		08ECA98E2A7E3DE4003C5799 /* CurrencyListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA98D2A7E3DE4003C5799 /* CurrencyListViewModelProtocol.swift */; };
+		08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA98F2A7E3E0B003C5799 /* CurrencyListViewModel.swift */; };
+		08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9912A7E4A46003C5799 /* CurencyListResponceSuccess.swift */; };
+		08ECA9942A7E4B8A003C5799 /* CurencyListResponceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9932A7E4B8A003C5799 /* CurencyListResponceError.swift */; };
+		08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9972A7E837D003C5799 /* SearchNavigationBarView.swift */; };
+		08ECA99B2A7E8E62003C5799 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA99A2A7E8E62003C5799 /* Montserrat.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		08ECA98D2A7E3DE4003C5799 /* CurrencyListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModelProtocol.swift; sourceTree = "<group>"; };
+		08ECA98F2A7E3E0B003C5799 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
+		08ECA9912A7E4A46003C5799 /* CurencyListResponceSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurencyListResponceSuccess.swift; sourceTree = "<group>"; };
+		08ECA9932A7E4B8A003C5799 /* CurencyListResponceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurencyListResponceError.swift; sourceTree = "<group>"; };
+		08ECA9972A7E837D003C5799 /* SearchNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationBarView.swift; sourceTree = "<group>"; };
+		08ECA99A2A7E8E62003C5799 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,7 @@
 		08ECA9472A7D7F00003C5799 /* Currency Converter */ = {
 			isa = PBXGroup;
 			children = (
+				08ECA9992A7E8E29003C5799 /* Fonts */,
 				08ECA9712A7D8D8D003C5799 /* Extensions */,
 				08ECA9482A7D7F00003C5799 /* AppDelegate.swift */,
 				08ECA94A2A7D7F00003C5799 /* SceneDelegate.swift */,
@@ -159,7 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				08ECA9752A7D9028003C5799 /* CurrencyListCoordinator.swift */,
+				08ECA98A2A7D9F17003C5799 /* Model */,
 				08ECA9772A7D90CC003C5799 /* View */,
+				08ECA98B2A7E3D75003C5799 /* ViewModel */,
 			);
 			path = CurrencyListScene;
 			sourceTree = "<group>";
@@ -168,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */,
+				08ECA9972A7E837D003C5799 /* SearchNavigationBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +222,40 @@
 				08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		08ECA98A2A7D9F17003C5799 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9912A7E4A46003C5799 /* CurencyListResponceSuccess.swift */,
+				08ECA9932A7E4B8A003C5799 /* CurencyListResponceError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08ECA98B2A7E3D75003C5799 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA98C2A7E3DC3003C5799 /* Protocol */,
+				08ECA98F2A7E3E0B003C5799 /* CurrencyListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08ECA98C2A7E3DC3003C5799 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA98D2A7E3DE4003C5799 /* CurrencyListViewModelProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		08ECA9992A7E8E29003C5799 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA99A2A7E8E62003C5799 /* Montserrat.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +321,7 @@
 				08ECA9892A7D9942003C5799 /* SettingsViewController.storyboard in Resources */,
 				08ECA9552A7D7F01003C5799 /* LaunchScreen.storyboard in Resources */,
 				08ECA9522A7D7F01003C5799 /* Assets.xcassets in Resources */,
+				08ECA99B2A7E8E62003C5799 /* Montserrat.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,13 +335,18 @@
 				08ECA95D2A7D805A003C5799 /* Coordinator.swift in Sources */,
 				08ECA95F2A7D80A9003C5799 /* AppCoordinator.swift in Sources */,
 				08ECA9632A7D81CF003C5799 /* MainTabBarViewController.swift in Sources */,
+				08ECA9942A7E4B8A003C5799 /* CurencyListResponceError.swift in Sources */,
 				08ECA9612A7D8193003C5799 /* MainTabBarCoordinator.swift in Sources */,
 				08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */,
 				08ECA96E2A7D8975003C5799 /* WalletViewController.swift in Sources */,
 				08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */,
+				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
+				08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */,
 				08ECA9872A7D98F9003C5799 /* SettingsViewController.swift in Sources */,
 				08ECA9682A7D873A003C5799 /* WalletCoordinator.swift in Sources */,
+				08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */,
 				08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */,
+				08ECA98E2A7E3DE4003C5799 /* CurrencyListViewModelProtocol.swift in Sources */,
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
 				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
 				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,
