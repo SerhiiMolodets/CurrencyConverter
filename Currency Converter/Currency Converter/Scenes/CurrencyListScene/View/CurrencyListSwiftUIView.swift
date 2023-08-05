@@ -13,16 +13,30 @@ struct CurrencyListSwiftUIView: View {
     var body: some View {
         VStack {
             SearchNavigationBarView(searchText: $viewModel.searchQuery, title: "Currency List")
-            List {
-                ForEach(viewModel.filtered.sorted(by: { $0.key < $1.key }), id: \.key) { key, value in
-                    Text("\(key): \(100/value)")
+            if viewModel.conversionRates.isEmpty {
+                Spacer()
+                ErrorView { Task {
+                    try? await viewModel.getRates()          }
                 }
+                Spacer()
+            } else {
+                List {
+                    ForEach(Array(viewModel.filtered.sorted(by: { $0.key < $1.key })), id: \.key) { key, value in
+                        if let currencyName = CountryManager.shared.findCurrencyName(for: key) {
+                            CurrencyListCellView(code: key, currencyName: currencyName, selectedCurrency: "UAH", value: (100/value))
+                                .id(UUID().uuidString)
+                                .listRowSeparator(.hidden)
+                        }
+                    }
+                }
+                .listRowBackground(Color.clear)  // Remove row separators
+                .listStyle(PlainListStyle())
+
             }
-            .listStyle(PlainListStyle())
         }
- 
+        
     }
- 
+    
     private func getAttributedTitle() -> AttributedString {
         var attributedString = AttributedString("Currency List")
         let font = Font.body

@@ -31,12 +31,12 @@ struct SearchNavigationBarView: View {
                     isSearching.toggle()
                 }) {
                     Image(systemName: isSearching ? "xmark.circle.fill" : "magnifyingglass")
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(uiColor: .tabBarUnselected))
                 }
             }
             .padding(.bottom, 3)
             Divider()
-                .background(Color.gray)
+                .background(Color(uiColor: .tabBarUnselected))
                 .frame(height: 1)
         }
     }

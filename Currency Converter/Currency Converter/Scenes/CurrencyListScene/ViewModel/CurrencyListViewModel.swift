@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-class CurrencyListViewModel: CurrencyListViewModelProtocol, ObservableObject {
+class CurrencyListViewModel: ObservableObject {
     @Published var conversionRates: [String: Double] = [:]
     @Published var searchQuery: String = ""
     @Published var error: Error?
