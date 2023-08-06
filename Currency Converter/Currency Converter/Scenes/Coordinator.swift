@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 
 class Coordinator {
+    
+    let bag = DisposeBag()
 
     private(set) var childCoordinators: [Coordinator] = []
 

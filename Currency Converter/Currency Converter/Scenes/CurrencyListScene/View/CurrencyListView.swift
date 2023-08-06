@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurrencyListView: View {
-    @StateObject var viewModel = CurrencyListViewModel()
+    @EnvironmentObject var viewModel: CurrencyListViewModel
     @State private var isSearching = false
     var body: some View {
         VStack {

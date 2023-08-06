@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Swinject
 
 class CurrencyListCoordinator: Coordinator {
     
@@ -30,7 +31,8 @@ class CurrencyListCoordinator: Coordinator {
     
     // MARK: - Navigation funcs
     private func openCurrencyListController() {
-        let viewController = UIHostingController(rootView: CurrencyListView())
+        guard let viewModel = Container.currencyList.resolve(CurrencyListViewModel.self) else { return }
+        let viewController = UIHostingController(rootView: CurrencyListView().environmentObject(viewModel))
         rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.currencyList.image, tag: 0)
         rootController.pushViewController(viewController, animated: true)
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class MainTabBarCoordinator: Coordinator {
     
@@ -47,7 +48,8 @@ class MainTabBarCoordinator: Coordinator {
     }
     
     private func addSettingsPage() {
-        let coordinator = SettingsCoordinator(UINavigationController())
+        guard let viewModel = Container.settings.resolve(SettingsViewModelProtocol.self) else { return }
+        let coordinator = SettingsCoordinator(UINavigationController(), viewModel)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)
         coordinator.start()

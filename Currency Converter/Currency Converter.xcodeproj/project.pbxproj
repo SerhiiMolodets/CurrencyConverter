@@ -37,6 +37,15 @@
 		08ECA9A62A7EA33B003C5799 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9A52A7EA33B003C5799 /* CountryManager.swift */; };
 		08ECA9AA2A7F9EDC003C5799 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */; };
 		08ECA9AC2A7FAAC2003C5799 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */; };
+		08ECA9AF2A7FBC14003C5799 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 08ECA9AE2A7FBC14003C5799 /* RxCocoa */; };
+		08ECA9B12A7FBC14003C5799 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 08ECA9B02A7FBC14003C5799 /* RxRelay */; };
+		08ECA9B32A7FBC14003C5799 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08ECA9B22A7FBC14003C5799 /* RxSwift */; };
+		08ECA9B62A7FBC60003C5799 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9B52A7FBC60003C5799 /* SettingsViewModel.swift */; };
+		08ECA9B82A7FD504003C5799 /* SelectCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9B72A7FD504003C5799 /* SelectCurrencyView.swift */; };
+		08ECA9BB2A7FDA19003C5799 /* SettingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9BA2A7FDA19003C5799 /* SettingViewModelProtocol.swift */; };
+		08ECA9BE2A7FDB98003C5799 /* SettingsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9BD2A7FDB98003C5799 /* SettingsContainer.swift */; };
+		08ECA9C12A7FDC11003C5799 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 08ECA9C02A7FDC11003C5799 /* Swinject */; };
+		08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +83,11 @@
 		08ECA9A82A7EACDE003C5799 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
 		08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		08ECA9B52A7FBC60003C5799 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		08ECA9B72A7FD504003C5799 /* SelectCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyView.swift; sourceTree = "<group>"; };
+		08ECA9BA2A7FDA19003C5799 /* SettingViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelProtocol.swift; sourceTree = "<group>"; };
+		08ECA9BD2A7FDB98003C5799 /* SettingsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainer.swift; sourceTree = "<group>"; };
+		08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08ECA9B32A7FBC14003C5799 /* RxSwift in Frameworks */,
+				08ECA9B12A7FBC14003C5799 /* RxRelay in Frameworks */,
+				08ECA9AF2A7FBC14003C5799 /* RxCocoa in Frameworks */,
+				08ECA9C12A7FDC11003C5799 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +202,7 @@
 				08ECA98A2A7D9F17003C5799 /* Model */,
 				08ECA9772A7D90CC003C5799 /* View */,
 				08ECA98B2A7E3D75003C5799 /* ViewModel */,
+				08ECA9C42A7FE7B0003C5799 /* DI */,
 			);
 			path = CurrencyListScene;
 			sourceTree = "<group>";
@@ -221,7 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */,
+				08ECA9BC2A7FDB73003C5799 /* DI */,
 				08ECA9832A7D98C0003C5799 /* View */,
+				08ECA9B42A7FBC35003C5799 /* ViewModel */,
 			);
 			path = SettingsScene;
 			sourceTree = "<group>";
@@ -231,6 +252,7 @@
 			children = (
 				08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */,
 				08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */,
+				08ECA9B72A7FD504003C5799 /* SelectCurrencyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +293,39 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		08ECA9B42A7FBC35003C5799 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9B92A7FD9FA003C5799 /* Protocol */,
+				08ECA9B52A7FBC60003C5799 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08ECA9B92A7FD9FA003C5799 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9BA2A7FDA19003C5799 /* SettingViewModelProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		08ECA9BC2A7FDB73003C5799 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9BD2A7FDB98003C5799 /* SettingsContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		08ECA9C42A7FE7B0003C5799 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +342,12 @@
 			dependencies = (
 			);
 			name = "Currency Converter";
+			packageProductDependencies = (
+				08ECA9AE2A7FBC14003C5799 /* RxCocoa */,
+				08ECA9B02A7FBC14003C5799 /* RxRelay */,
+				08ECA9B22A7FBC14003C5799 /* RxSwift */,
+				08ECA9C02A7FDC11003C5799 /* Swinject */,
+			);
 			productName = "Currency Converter";
 			productReference = 08ECA9452A7D7F00003C5799 /* Currency Converter.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +376,10 @@
 				Base,
 			);
 			mainGroup = 08ECA93C2A7D7F00003C5799;
+			packageReferences = (
+				08ECA9AD2A7FBC14003C5799 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				08ECA9BF2A7FDC11003C5799 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 08ECA9462A7D7F00003C5799 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,11 +415,15 @@
 				08ECA9AC2A7FAAC2003C5799 /* NavigationBarView.swift in Sources */,
 				08ECA95F2A7D80A9003C5799 /* AppCoordinator.swift in Sources */,
 				08ECA9632A7D81CF003C5799 /* MainTabBarViewController.swift in Sources */,
+				08ECA9B82A7FD504003C5799 /* SelectCurrencyView.swift in Sources */,
+				08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */,
 				08ECA9612A7D8193003C5799 /* MainTabBarCoordinator.swift in Sources */,
 				08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */,
+				08ECA9BB2A7FDA19003C5799 /* SettingViewModelProtocol.swift in Sources */,
 				08ECA99F2A7E9F0B003C5799 /* CurrencyListCellView.swift in Sources */,
 				08ECA96E2A7D8975003C5799 /* WalletViewController.swift in Sources */,
 				08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */,
+				08ECA9B62A7FBC60003C5799 /* SettingsViewModel.swift in Sources */,
 				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
 				08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */,
 				08ECA9682A7D873A003C5799 /* WalletCoordinator.swift in Sources */,
@@ -364,6 +433,7 @@
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
 				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
 				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,
+				08ECA9BE2A7FDB98003C5799 /* SettingsContainer.swift in Sources */,
 				08ECA9792A7D90F5003C5799 /* CurrencyListView.swift in Sources */,
 				08ECA9732A7D8DB0003C5799 /* UIColoro+appColoros.swift in Sources */,
 				08ECA9A62A7EA33B003C5799 /* CountryManager.swift in Sources */,
@@ -576,6 +646,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08ECA9AD2A7FBC14003C5799 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		08ECA9BF2A7FDC11003C5799 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08ECA9AE2A7FBC14003C5799 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08ECA9AD2A7FBC14003C5799 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		08ECA9B02A7FBC14003C5799 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08ECA9AD2A7FBC14003C5799 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		08ECA9B22A7FBC14003C5799 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08ECA9AD2A7FBC14003C5799 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		08ECA9C02A7FDC11003C5799 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08ECA9BF2A7FDC11003C5799 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08ECA93D2A7D7F00003C5799 /* Project object */;
 }

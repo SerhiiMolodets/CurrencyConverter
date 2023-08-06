@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import RxCocoa
+import RxSwift
 
 struct SettingsView: View {
     var code: String
+    var viewModel: SettingsViewModelProtocol
     
     var body: some View {
         VStack {
             NavigationBarView(title: "Settings", isBackButtonVisible: false)
-            Button(action: selectedDidTap) {
+            Button(action: {
+                viewModel.selectedCurrencySubject.onNext(code)
+            })
+            {
                 HStack {
                     VStack {
                         HStack {
@@ -47,16 +53,13 @@ struct SettingsView: View {
                 .frame(height: 1)
             
             Spacer()
+            
         }
-    }
-    private func selectedDidTap() {
-// this handle i want to delegate to the my coordinator
-//        and in coordinator i want to create destination link and new screen
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(code: "UAH")
+        SettingsView(code: "UAH", viewModel: SettingsViewModel())
     }
 }
