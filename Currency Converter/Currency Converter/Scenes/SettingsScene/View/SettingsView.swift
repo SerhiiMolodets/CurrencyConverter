@@ -10,14 +10,15 @@ import RxCocoa
 import RxSwift
 
 struct SettingsView: View {
-    var code: String
+    // MARK: - Properties
     var viewModel: SettingsViewModelProtocol
-    
+    @State private var savedCode: String = "UAH"
+    // MARK: - Content view
     var body: some View {
         VStack {
             NavigationBarView(title: "Settings", isBackButtonVisible: false)
             Button(action: {
-                viewModel.selectedCurrencySubject.onNext(code)
+                viewModel.selectedCurrencySubject.onNext(())
             })
             {
                 HStack {
@@ -32,7 +33,7 @@ struct SettingsView: View {
                             Spacer()
                         }
                         HStack {
-                            Text(CountryManager.shared.findCountry(by: code) ?? "Not found")
+                            Text(CountryManager.shared.findCountry(by: savedCode) ?? "Not found")
                                 .font(.custom("Inter-Medium", size: 14))
                                 .foregroundColor(Color(uiColor: .tabBarUnselected))
                                 .padding(.leading, 8)
@@ -43,23 +44,27 @@ struct SettingsView: View {
                     Spacer()
                     
                 }
-                Image(code)
+                Image(savedCode)
                     .resizable()
                     .frame(width: 44, height: 44, alignment: .center)
                     .padding(.trailing, 8)
+            }
+            .onAppear {
+                viewModel.loadSelectedCurrency()
+                savedCode = viewModel.savedCode
             }
             Divider()
                 .background(Color(uiColor: .tabBarUnselected))
                 .frame(height: 1)
             
             Spacer()
-            
         }
     }
 }
 
+// MARK: - Content preview
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(code: "UAH", viewModel: SettingsViewModel())
+        SettingsView(viewModel: SettingsViewModel())
     }
 }

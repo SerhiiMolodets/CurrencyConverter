@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CurrencyCodeAndName: Codable {
+struct CurrencyCodeAndName: Codable, Hashable {
     let currencyCode, currencyName: String
 
     enum CodingKeys: String, CodingKey {

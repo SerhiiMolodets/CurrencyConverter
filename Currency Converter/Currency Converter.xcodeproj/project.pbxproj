@@ -46,6 +46,7 @@
 		08ECA9BE2A7FDB98003C5799 /* SettingsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9BD2A7FDB98003C5799 /* SettingsContainer.swift */; };
 		08ECA9C12A7FDC11003C5799 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 08ECA9C02A7FDC11003C5799 /* Swinject */; };
 		08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */; };
+		08ECA9C82A7FF445003C5799 /* SelectCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		08ECA9BA2A7FDA19003C5799 /* SettingViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelProtocol.swift; sourceTree = "<group>"; };
 		08ECA9BD2A7FDB98003C5799 /* SettingsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainer.swift; sourceTree = "<group>"; };
 		08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListContainer.swift; sourceTree = "<group>"; };
+		08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */,
 				08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */,
 				08ECA9B72A7FD504003C5799 /* SelectCurrencyView.swift */,
+				08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */,
 				08ECA9A42A7EA14E003C5799 /* CountryCurrenciesModel.swift in Sources */,
 				08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */,
+				08ECA9C82A7FF445003C5799 /* SelectCurrencyCell.swift in Sources */,
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
 				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
 				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,

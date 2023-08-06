@@ -23,16 +23,18 @@ struct CurrencyListView: View {
                 List {
                     ForEach(Array(viewModel.filtered.sorted(by: { $0.key < $1.key })), id: \.key) { key, value in
                         if let currencyName = CountryManager.shared.findCurrencyName(for: key) {
-                            CurrencyListCellView(code: key, currencyName: currencyName, selectedCurrency: "UAH", value: (100/value))
+                            CurrencyListCellView(code: key, currencyName: currencyName, selectedCurrency: viewModel.savedCode, value: (100/value))
                                 .id(UUID().uuidString)
                                 .listRowSeparator(.visible)
                                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         }
                     }
                 }
-                .listRowBackground(Color.clear)  // Remove row separators
+                .onAppear {
+                    viewModel.fetch()
+                }
+                .listRowBackground(Color.clear)
                 .listStyle(PlainListStyle())
-                
             }
         }
         

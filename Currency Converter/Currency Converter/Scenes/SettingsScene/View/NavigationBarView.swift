@@ -29,13 +29,16 @@ struct NavigationBarView: View {
                 Text(title)
                     .font(Font.custom("Montserrat", size: 17))
                     .fontWeight(.semibold)
-                
+                    .padding(.trailing, isBackButtonVisible ? 50 : 0)
                 Spacer()
+
             }
+
             .padding(.bottom, 3)
             Divider()
                 .background(Color(uiColor: .tabBarUnselected))
                 .frame(height: 1)
+
         }
     }
 }

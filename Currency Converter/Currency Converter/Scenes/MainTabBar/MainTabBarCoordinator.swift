@@ -49,6 +49,7 @@ class MainTabBarCoordinator: Coordinator {
     
     private func addSettingsPage() {
         guard let viewModel = Container.settings.resolve(SettingsViewModelProtocol.self) else { return }
+        viewModel.loadSelectedCurrency()
         let coordinator = SettingsCoordinator(UINavigationController(), viewModel)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)

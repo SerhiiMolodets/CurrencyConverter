@@ -9,5 +9,11 @@ import Foundation
 import RxSwift
 
 protocol SettingsViewModelProtocol {
-    var selectedCurrencySubject: PublishSubject<String> { get }
+    var selectedCurrencySubject: PublishSubject<Void> { get }
+    var listData: [CurrencyCodeAndName]  { get }
+    var savedCode: String { get set }
+    
+    func saveSelected(currency: String)
+    func loadSelectedCurrency()
+    func isSelected(_ code: String) -> Bool
 }

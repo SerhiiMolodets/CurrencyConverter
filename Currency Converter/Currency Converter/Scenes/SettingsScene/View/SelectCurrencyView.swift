@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct SelectCurrencyView: View {
-    var code: String
-    var viewModel: SettingsViewModelProtocol
     
+    // MARK: - Properties
+    var viewModel: SettingsViewModelProtocol
+    @Environment(\.presentationMode) var presentationMode
+    // MARK: - Content view
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationBarHidden(true)
+        VStack {
+                NavigationBarView(title: "Selected Currency", isBackButtonVisible: true)
+                            .navigationBarHidden(true)
+            List(viewModel.listData, id: \.self) { item in
+                SelectCurrencyCell(code: item.currencyCode, currencyName: item.currencyName, isSelected: viewModel.isSelected(item.currencyCode))
+                    .onTapGesture {
+                        viewModel.saveSelected(currency: item.currencyCode)
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                    .listRowSeparator(.visible)
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            }
+            .listStyle(PlainListStyle())
+        }
+
+
     }
 }
 
+// MARK: - Content preview
 struct SelectCurrencyView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectCurrencyView(code: "sss", viewModel: SettingsViewModel())
+        SelectCurrencyView(viewModel: SettingsViewModel())
     }
 }
