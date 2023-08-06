@@ -25,7 +25,8 @@ struct CurrencyListSwiftUIView: View {
                         if let currencyName = CountryManager.shared.findCurrencyName(for: key) {
                             CurrencyListCellView(code: key, currencyName: currencyName, selectedCurrency: "UAH", value: (100/value))
                                 .id(UUID().uuidString)
-                                .listRowSeparator(.hidden)
+                                .listRowSeparator(.visible)
+                                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         }
                     }
                 }

@@ -22,7 +22,7 @@ struct CurrencyListCellView: View {
                 Image(code)
                     .resizable()
                     .frame(width: 30, height: 30, alignment: .center)
-                    .padding(.leading, 17)
+                    .padding(.leading, 8)
                 Text(code)
                     .font(.custom("Inter-Medium", size: 14))
                     .padding(.leading, 3)
@@ -41,12 +41,9 @@ struct CurrencyListCellView: View {
                 }
                 Text(selectedCurrency)
                     .font(.custom("Inter-Medium", size: 14))
-                    .padding(.trailing, 17)
+                    .padding(.trailing, 8)
             }
-            Divider()
-                .background(Color(uiColor: .tabBarUnselected))
-                .frame(height: 1)
-            Spacer()
+
         }
         
         
