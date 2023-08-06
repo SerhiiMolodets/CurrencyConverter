@@ -11,7 +11,7 @@ import SwiftUI
 class CurrencyListViewModel: ObservableObject {
     @Published var conversionRates: [String: Double] = [:]
     @Published var searchQuery: String = ""
-    @Published var error: Error?
+    @Published var warningIsShowed: Bool = false
     var filtered: [String: Double] {
         guard !searchQuery.isEmpty else { return conversionRates }
         
@@ -25,6 +25,9 @@ class CurrencyListViewModel: ObservableObject {
             do {
                 try await getRates()
             } catch {
+                DispatchQueue.main.async {
+                    self.warningIsShowed = true
+                }
                 print(error)
             }
         }
@@ -37,6 +40,7 @@ class CurrencyListViewModel: ObservableObject {
         let responce = try JSONDecoder().decode(CurencyListResponceSuccess.self, from: data)
         DispatchQueue.main.async {
             self.conversionRates = responce.conversionRates
+            self.warningIsShowed = false
         }
     }
     

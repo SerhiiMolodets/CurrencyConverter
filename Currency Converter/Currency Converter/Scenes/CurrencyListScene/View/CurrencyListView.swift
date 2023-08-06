@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct CurrencyListSwiftUIView: View {
+struct CurrencyListView: View {
     @StateObject var viewModel = CurrencyListViewModel()
     @State private var isSearching = false
     var body: some View {
         VStack {
             SearchNavigationBarView(searchText: $viewModel.searchQuery, title: "Currency List")
-            if viewModel.conversionRates.isEmpty {
+            if viewModel.warningIsShowed {
                 Spacer()
                 ErrorView { Task {
                     try? await viewModel.getRates()          }
@@ -32,7 +32,7 @@ struct CurrencyListSwiftUIView: View {
                 }
                 .listRowBackground(Color.clear)  // Remove row separators
                 .listStyle(PlainListStyle())
-
+                
             }
         }
         
@@ -46,8 +46,8 @@ struct CurrencyListSwiftUIView: View {
     }
 }
 
-struct CurrencyListSwiftUIView_Previews: PreviewProvider {
+struct CurrencyListView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyListSwiftUIView()
+        CurrencyListView()
     }
 }

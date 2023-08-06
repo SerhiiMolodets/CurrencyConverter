@@ -21,13 +21,11 @@
 		08ECA9702A7D8982003C5799 /* WalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA96F2A7D8982003C5799 /* WalletViewController.storyboard */; };
 		08ECA9732A7D8DB0003C5799 /* UIColoro+appColoros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */; };
 		08ECA9762A7D9028003C5799 /* CurrencyListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9752A7D9028003C5799 /* CurrencyListCoordinator.swift */; };
-		08ECA9792A7D90F5003C5799 /* CurrencyListSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */; };
+		08ECA9792A7D90F5003C5799 /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9782A7D90F5003C5799 /* CurrencyListView.swift */; };
 		08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */; };
 		08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA97E2A7D972A003C5799 /* BidsViewController.swift */; };
 		08ECA9812A7D9735003C5799 /* BidsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */; };
 		08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */; };
-		08ECA9872A7D98F9003C5799 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */; };
-		08ECA9892A7D9942003C5799 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */; };
 		08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA98F2A7E3E0B003C5799 /* CurrencyListViewModel.swift */; };
 		08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9912A7E4A46003C5799 /* CurencyListResponceSuccess.swift */; };
 		08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9972A7E837D003C5799 /* SearchNavigationBarView.swift */; };
@@ -37,6 +35,8 @@
 		08ECA9A22A7E9FF0003C5799 /* CountryCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9A12A7E9FF0003C5799 /* CountryCurrencies.json */; };
 		08ECA9A42A7EA14E003C5799 /* CountryCurrenciesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9A32A7EA14E003C5799 /* CountryCurrenciesModel.swift */; };
 		08ECA9A62A7EA33B003C5799 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9A52A7EA33B003C5799 /* CountryManager.swift */; };
+		08ECA9AA2A7F9EDC003C5799 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */; };
+		08ECA9AC2A7FAAC2003C5799 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,13 +56,11 @@
 		08ECA96F2A7D8982003C5799 /* WalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletViewController.storyboard; sourceTree = "<group>"; };
 		08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColoro+appColoros.swift"; sourceTree = "<group>"; };
 		08ECA9752A7D9028003C5799 /* CurrencyListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListCoordinator.swift; sourceTree = "<group>"; };
-		08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListSwiftUIView.swift; sourceTree = "<group>"; };
+		08ECA9782A7D90F5003C5799 /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
 		08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsCoordinator.swift; sourceTree = "<group>"; };
 		08ECA97E2A7D972A003C5799 /* BidsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsViewController.swift; sourceTree = "<group>"; };
 		08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BidsViewController.storyboard; sourceTree = "<group>"; };
 		08ECA9842A7D98DB003C5799 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
-		08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
 		08ECA98F2A7E3E0B003C5799 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
 		08ECA9912A7E4A46003C5799 /* CurencyListResponceSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurencyListResponceSuccess.swift; sourceTree = "<group>"; };
 		08ECA9972A7E837D003C5799 /* SearchNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationBarView.swift; sourceTree = "<group>"; };
@@ -74,6 +72,8 @@
 		08ECA9A52A7EA33B003C5799 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 		08ECA9A72A7EACB2003C5799 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		08ECA9A82A7EACDE003C5799 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
+		08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 		08ECA9772A7D90CC003C5799 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				08ECA9782A7D90F5003C5799 /* CurrencyListSwiftUIView.swift */,
+				08ECA9782A7D90F5003C5799 /* CurrencyListView.swift */,
 				08ECA9972A7E837D003C5799 /* SearchNavigationBarView.swift */,
 				08ECA99C2A7E9445003C5799 /* ErrorView.swift */,
 				08ECA99E2A7E9F0B003C5799 /* CurrencyListCellView.swift */,
@@ -229,8 +229,8 @@
 		08ECA9832A7D98C0003C5799 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				08ECA9862A7D98F9003C5799 /* SettingsViewController.swift */,
-				08ECA9882A7D9942003C5799 /* SettingsViewController.storyboard */,
+				08ECA9AB2A7FAAC2003C5799 /* NavigationBarView.swift */,
+				08ECA9A92A7F9EDC003C5799 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,7 +331,6 @@
 			files = (
 				08ECA9702A7D8982003C5799 /* WalletViewController.storyboard in Resources */,
 				08ECA9812A7D9735003C5799 /* BidsViewController.storyboard in Resources */,
-				08ECA9892A7D9942003C5799 /* SettingsViewController.storyboard in Resources */,
 				08ECA9A22A7E9FF0003C5799 /* CountryCurrencies.json in Resources */,
 				08ECA9552A7D7F01003C5799 /* LaunchScreen.storyboard in Resources */,
 				08ECA9522A7D7F01003C5799 /* Assets.xcassets in Resources */,
@@ -347,6 +346,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				08ECA95D2A7D805A003C5799 /* Coordinator.swift in Sources */,
+				08ECA9AA2A7F9EDC003C5799 /* SettingsView.swift in Sources */,
+				08ECA9AC2A7FAAC2003C5799 /* NavigationBarView.swift in Sources */,
 				08ECA95F2A7D80A9003C5799 /* AppCoordinator.swift in Sources */,
 				08ECA9632A7D81CF003C5799 /* MainTabBarViewController.swift in Sources */,
 				08ECA9612A7D8193003C5799 /* MainTabBarCoordinator.swift in Sources */,
@@ -356,7 +357,6 @@
 				08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */,
 				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
 				08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */,
-				08ECA9872A7D98F9003C5799 /* SettingsViewController.swift in Sources */,
 				08ECA9682A7D873A003C5799 /* WalletCoordinator.swift in Sources */,
 				08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */,
 				08ECA9A42A7EA14E003C5799 /* CountryCurrenciesModel.swift in Sources */,
@@ -364,7 +364,7 @@
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
 				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
 				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,
-				08ECA9792A7D90F5003C5799 /* CurrencyListSwiftUIView.swift in Sources */,
+				08ECA9792A7D90F5003C5799 /* CurrencyListView.swift in Sources */,
 				08ECA9732A7D8DB0003C5799 /* UIColoro+appColoros.swift in Sources */,
 				08ECA9A62A7EA33B003C5799 /* CountryManager.swift in Sources */,
 				08ECA9762A7D9028003C5799 /* CurrencyListCoordinator.swift in Sources */,

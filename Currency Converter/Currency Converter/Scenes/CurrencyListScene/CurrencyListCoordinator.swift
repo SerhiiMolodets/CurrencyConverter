@@ -30,10 +30,7 @@ class CurrencyListCoordinator: Coordinator {
     
     // MARK: - Navigation funcs
     private func openCurrencyListController() {
-        let viewController = UIHostingController(rootView: CurrencyListSwiftUIView())
-        rootController.tabBarItem = UITabBarItem(title: "Second",
-                                                 image: nil,
-                                                 selectedImage: nil)
+        let viewController = UIHostingController(rootView: CurrencyListView())
         rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.currencyList.image, tag: 0)
         rootController.pushViewController(viewController, animated: true)
     }

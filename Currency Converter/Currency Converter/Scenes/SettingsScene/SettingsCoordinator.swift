@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SettingsCoordinator: Coordinator {
     
@@ -29,7 +30,7 @@ class SettingsCoordinator: Coordinator {
     
     // MARK: - Navigation funcs
     private func openSettingsController() {
-        let viewController = SettingsViewController.instantiate(coordinator: self)
+        let viewController = UIHostingController(rootView: SettingsView(code: "UAH"))
         rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.settings.image, tag: 3)
         rootController.pushViewController(viewController, animated: true)
     }

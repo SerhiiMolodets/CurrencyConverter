@@ -19,7 +19,6 @@ final class CountryManager {
             do {
                 let data = try Data(contentsOf: url)
                 currencyData = try JSONDecoder().decode(CountryCurrencies.self, from: data)
-                print(currencyData.count, "loaded")
             } catch {
                 print("Error decoding JSON: \(error)")
             }
