@@ -27,15 +27,15 @@ class CurrencyListViewModel: ObservableObject {
     
     
     private func getRates() async throws {
-        guard let url = URL(string: "https://v6.exchangerate-api.com/v6/7edcef7c0bb1f72a47090f30/latest/\(savedCode)") else { return }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let responce = try JSONDecoder().decode(CurencyListResponceSuccess.self, from: data)
-        DispatchQueue.main.async {
-            print("request")
-            self.conversionRates = responce.conversionRates
-            self.conversionRates.removeValue(forKey: self.savedCode)
-            self.warningIsShowed = false
-        }
+//        guard let url = URL(string: "https://v6.exchangerate-api.com/v6/7edcef7c0bb1f72a47090f30/latest/\(savedCode)") else { return }
+//        let (data, _) = try await URLSession.shared.data(from: url)
+//        let responce = try JSONDecoder().decode(CurencyListResponceSuccess.self, from: data)
+//        DispatchQueue.main.async {
+//            print("request")
+//            self.conversionRates = responce.conversionRates
+//            self.conversionRates.removeValue(forKey: self.savedCode)
+//            self.warningIsShowed = false
+//        }
     }
     
     func fetch() {

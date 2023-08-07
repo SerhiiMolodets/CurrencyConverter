@@ -12,7 +12,7 @@ struct CurrencyListView: View {
     @State private var isSearching = false
     var body: some View {
         VStack {
-            SearchNavigationBarView(searchText: $viewModel.searchQuery, title: "Currency List")
+            SearchNavigationBarView(searchText: $viewModel.searchQuery, tools: [.search], title: "Currency List")
                 .navigationBarHidden(true)
             if viewModel.warningIsShowed {
                 Spacer()

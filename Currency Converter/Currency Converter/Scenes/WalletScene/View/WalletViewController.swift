@@ -7,10 +7,16 @@
 
 import UIKit
 
-class WalletViewController: UIViewController, Storyboarded {
+class WalletViewController: BaseViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar(title: "Wallet") {
+            print("add tapped")
+        } searchHandler: { searchtext in
+            print(searchtext)
+        }
+
     }
 
 }

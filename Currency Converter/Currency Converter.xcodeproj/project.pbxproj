@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C7BE2E2A80E8940020E120 /* String+CurrencySymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7BE2D2A80E8940020E120 /* String+CurrencySymbol.swift */; };
+		08C7BE302A80F88D0020E120 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C7BE2F2A80F88D0020E120 /* BaseViewController.swift */; };
 		08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9482A7D7F00003C5799 /* AppDelegate.swift */; };
 		08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA94A2A7D7F00003C5799 /* SceneDelegate.swift */; };
 		08ECA9522A7D7F01003C5799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9512A7D7F01003C5799 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08C7BE2D2A80E8940020E120 /* String+CurrencySymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CurrencySymbol.swift"; sourceTree = "<group>"; };
+		08C7BE2F2A80F88D0020E120 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		08ECA9452A7D7F00003C5799 /* Currency Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ECA9482A7D7F00003C5799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08ECA94A2A7D7F00003C5799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			children = (
 				08ECA9A02A7E9FDB003C5799 /* Data */,
 				08ECA96A2A7D8916003C5799 /* Storyboarded.swift */,
+				08C7BE2F2A80F88D0020E120 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */,
+				08C7BE2D2A80E8940020E120 /* String+CurrencySymbol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -426,6 +432,8 @@
 				08ECA99F2A7E9F0B003C5799 /* CurrencyListCellView.swift in Sources */,
 				08ECA96E2A7D8975003C5799 /* WalletViewController.swift in Sources */,
 				08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */,
+				08C7BE302A80F88D0020E120 /* BaseViewController.swift in Sources */,
+				08C7BE2E2A80E8940020E120 /* String+CurrencySymbol.swift in Sources */,
 				08ECA9B62A7FBC60003C5799 /* SettingsViewModel.swift in Sources */,
 				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
 				08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */,
