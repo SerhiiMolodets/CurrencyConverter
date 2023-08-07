@@ -23,7 +23,7 @@ struct SelectCurrencyView: View {
                         viewModel.saveSelected(currency: item.currencyCode)
                         self.presentationMode.wrappedValue.dismiss()
                     }
-                    .listRowSeparator(.visible)
+                    .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             }
             .listStyle(PlainListStyle())

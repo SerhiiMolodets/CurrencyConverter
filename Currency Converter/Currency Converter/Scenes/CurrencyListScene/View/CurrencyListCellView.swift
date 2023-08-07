@@ -17,7 +17,6 @@ struct CurrencyListCellView: View {
     }
     var body: some View {
         VStack {
-
             HStack {
                 Image(code)
                     .resizable()
@@ -43,7 +42,10 @@ struct CurrencyListCellView: View {
                     .font(.custom("Inter-Medium", size: 14))
                     .padding(.trailing, 8)
             }
-
+            .padding(.top, 8)
+            Divider()
+                .background(Color(uiColor: .tabBarUnselected))
+                .frame(height: 1)
         }
         
         

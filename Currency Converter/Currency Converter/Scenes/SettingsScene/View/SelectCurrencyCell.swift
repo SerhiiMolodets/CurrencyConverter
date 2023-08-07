@@ -13,7 +13,6 @@ struct SelectCurrencyCell: View {
     var isSelected: Bool
     var body: some View {
         VStack {
-
             HStack {
                 Image(code)
                     .resizable()
@@ -33,6 +32,10 @@ struct SelectCurrencyCell: View {
                     .padding(.trailing, 8)
              
             }
+            .padding(.top, 8)
+            Divider()
+                .background(Color(uiColor: .tabBarUnselected))
+                .frame(height: 1)
         }
     }
 
