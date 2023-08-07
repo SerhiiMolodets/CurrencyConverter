@@ -13,10 +13,11 @@ struct CurrencyListView: View {
     var body: some View {
         VStack {
             SearchNavigationBarView(searchText: $viewModel.searchQuery, title: "Currency List")
+                .navigationBarHidden(true)
             if viewModel.warningIsShowed {
                 Spacer()
                 ErrorView { Task {
-                    try? await viewModel.getRates()          }
+                    viewModel.fetch()          }
                 }
                 Spacer()
             } else {
@@ -31,7 +32,7 @@ struct CurrencyListView: View {
                             }
                         }
                     }
-
+                    
                 }
                 .onAppear {
                     viewModel.fetch()

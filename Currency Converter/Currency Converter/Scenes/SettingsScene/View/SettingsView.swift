@@ -17,6 +17,7 @@ struct SettingsView: View {
     var body: some View {
         VStack {
             NavigationBarView(title: "Settings", isBackButtonVisible: false)
+                .navigationBarHidden(true)
             Button(action: {
                 viewModel.selectedCurrencySubject.onNext(())
             })
