@@ -24,16 +24,23 @@ class SelectViewController: BaseViewController, Storyboarded {
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
+        configuredUI()
         setupNavBar()
         setupTableView()
     }
     
     // MARK: - Flow funcs
     private func setupNavBar() {
-        navigationItem.hidesBackButton = true
+        
         setupBackNavBar(title: "Select Country") { [weak self] in
             self?.viewModel.backSubject.onNext(())
         }
+    }
+    
+    private func configuredUI() {
+        navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     private func setupTableView() {

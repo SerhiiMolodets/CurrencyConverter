@@ -38,7 +38,8 @@ class WalletViewController: BaseViewController, Storyboarded {
         subTitleLabel.textColor = .tabBarUnselected
         subTitleLabel.font = UIFont(name: "Inter-Medium", size: 20)
         balanceLabel.font = UIFont(name: "Inter-Medium", size: 48)
-        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     private func setupNavBar () {
         setupNavBar(title: "Wallet") { [weak self] in

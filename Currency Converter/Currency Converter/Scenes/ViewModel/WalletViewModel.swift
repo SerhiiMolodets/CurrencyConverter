@@ -53,7 +53,6 @@ class WalletViewModel: WalletViewModelProtocol {
     private func fetch() {
         realmManager.loadWalletModels { loaded in
             self.walletData.onNext(loaded)
-            print(loaded)
         }
     }
     
