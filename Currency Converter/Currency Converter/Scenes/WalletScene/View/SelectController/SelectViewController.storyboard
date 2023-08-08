@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bids View Controller-->
+        <!--Select View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="BidsViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SelectViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="F1S-Z7-XCC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mdN-kw-xey">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -24,16 +24,19 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F1S-Z7-XCC" secondAttribute="trailing" id="9Yi-eP-CAf"/>
-                            <constraint firstItem="F1S-Z7-XCC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="CQa-m2-gcr"/>
-                            <constraint firstItem="F1S-Z7-XCC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="EA1-Ft-qas"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="F1S-Z7-XCC" secondAttribute="bottom" id="L2G-6t-7q9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="mdN-kw-xey" secondAttribute="bottom" id="W6d-ly-qRj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mdN-kw-xey" secondAttribute="trailing" id="a4I-58-ApR"/>
+                            <constraint firstItem="mdN-kw-xey" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dpn-xF-A3x"/>
+                            <constraint firstItem="mdN-kw-xey" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jsB-P1-C4N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectTableView" destination="mdN-kw-xey" id="W8x-Xc-kPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="4"/>
+            <point key="canvasLocation" x="63" y="-27"/>
         </scene>
     </scenes>
     <resources>

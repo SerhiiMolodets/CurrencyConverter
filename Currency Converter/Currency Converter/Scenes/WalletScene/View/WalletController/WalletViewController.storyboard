@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wallet View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="WalletViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cfA-SQ-XrL">
+                                <rect key="frame" x="0.0" y="130" width="393" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2E-hP-NbP">
+                                <rect key="frame" x="23.000000000000007" y="72" width="101.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 2.445.21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3Z-Zk-2B7">
+                                <rect key="frame" x="23" y="98" width="80.666666666666671" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cfA-SQ-XrL" secondAttribute="trailing" id="KaU-ud-hq1"/>
+                            <constraint firstItem="f2E-hP-NbP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="13" id="PsO-ma-Fdt"/>
+                            <constraint firstItem="cfA-SQ-XrL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wq5-ph-bLz"/>
+                            <constraint firstItem="b3Z-Zk-2B7" firstAttribute="top" secondItem="f2E-hP-NbP" secondAttribute="bottom" constant="5" id="WvT-Ry-iUp"/>
+                            <constraint firstItem="b3Z-Zk-2B7" firstAttribute="leading" secondItem="f2E-hP-NbP" secondAttribute="leading" id="e1e-qX-ma8"/>
+                            <constraint firstItem="cfA-SQ-XrL" firstAttribute="top" secondItem="b3Z-Zk-2B7" secondAttribute="bottom" constant="11" id="je6-hw-naO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cfA-SQ-XrL" secondAttribute="bottom" id="x9S-hq-HiG"/>
+                            <constraint firstItem="f2E-hP-NbP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="23" id="xpY-B0-Pve"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="b3Z-Zk-2B7" id="Aj6-Fb-CrM"/>
+                        <outlet property="subTitleLabel" destination="f2E-hP-NbP" id="yKp-vQ-yMj"/>
+                        <outlet property="waletTableView" destination="cfA-SQ-XrL" id="glz-O9-kz5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

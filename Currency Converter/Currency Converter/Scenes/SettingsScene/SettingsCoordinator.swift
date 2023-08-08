@@ -48,9 +48,10 @@ class SettingsCoordinator: Coordinator {
         rootController.pushViewController(viewController, animated: true)
     }
     
+    // MARK: - Bindings funcs
     private func setupBindings() {
         viewModel.selectedCurrencySubject
-            .subscribe(onNext: { [weak self] currencyCode in
+            .subscribe(onNext: { [weak self] _ in
                 self?.openSelectCurrency()
             })
             .disposed(by: bag)

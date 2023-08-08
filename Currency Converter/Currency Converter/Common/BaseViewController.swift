@@ -8,15 +8,16 @@
 import UIKit
 import SwiftUI
 import Combine
+import RxSwift
+
 class BaseViewController: UIViewController {
     
     private var cancellable: AnyCancellable!
-    
+    let bag = DisposeBag()
     let model = MyModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-   
+        navigationController?.navigationItem.hidesBackButton = true
     }
     
     func performSearch(_ searchHandler: @escaping (String) -> ()) {
@@ -24,15 +25,19 @@ class BaseViewController: UIViewController {
             .removeDuplicates()
             .sink { searchHandler($0) }
     }
-    func setupNavBar(title: String, addAction: () -> Void, searchHandler: @escaping (String) -> ()) {
+    func setupNavBar(title: String, addAction: @escaping () -> Void, searchHandler: @escaping (String) -> ()) {
         model.title = title
-        model.addAction = {
-            print("add tapped")
-        }
+        model.addAction = addAction
         let navBar = ContentView(model: model)
         let hostingController = UIHostingController(rootView:navBar)
         navigationItem.titleView = hostingController.view
         performSearch { searchHandler($0) }
+    }
+    
+    func setupBackNavBar(title: String, backAction: @escaping () -> Void) {
+        let navBar = NavigationBarView(title: title, isBackButtonVisible: true, backAction: backAction)
+        let hostingController = UIHostingController(rootView:navBar)
+        navigationItem.titleView = hostingController.view
     }
 
 }

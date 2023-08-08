@@ -31,7 +31,6 @@ class CurrencyListViewModel: ObservableObject {
 //        let (data, _) = try await URLSession.shared.data(from: url)
 //        let responce = try JSONDecoder().decode(CurencyListResponceSuccess.self, from: data)
 //        DispatchQueue.main.async {
-//            print("request")
 //            self.conversionRates = responce.conversionRates
 //            self.conversionRates.removeValue(forKey: self.savedCode)
 //            self.warningIsShowed = false
