@@ -27,7 +27,9 @@ class MainTabBarCoordinator: Coordinator {
     
     // MARK: - Navigation funcs
     private func addWalletPage() {
-        guard let viewModel = Container.wallet.resolve(WalletViewModelProtocol.self) else { return }
+        guard var viewModel = Container.wallet.resolve(WalletViewModelProtocol.self) else { return }
+        guard let realmManager = Container.realm.resolve(RealmManagerProtocol.self) else { return }
+        viewModel.realmManager = realmManager
         let coordinator = WalletCoordinator(UINavigationController(), viewModel)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)

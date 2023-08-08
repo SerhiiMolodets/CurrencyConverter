@@ -7,9 +7,13 @@
 
 import Foundation
 import RxSwift
+import RxRelay
+
 
 class WalletViewModel: WalletViewModelProtocol {
+    
     var addCurrencySubject = PublishSubject<Void>()
+    var searchText: BehaviorRelay<String> = BehaviorRelay(value: "")
     var backSubject = PublishSubject<Void>()
     var selectSubject = PublishSubject<Void>()
     var countries = Observable.just(CountryManager.shared.currencyData)
@@ -18,6 +22,8 @@ class WalletViewModel: WalletViewModelProtocol {
     private var currentWalletArray: [WalletModel] = []
     var currentCode: String = ""
     
+    var realmManager: RealmManagerProtocol!
+    
     
     
     
@@ -25,9 +31,8 @@ class WalletViewModel: WalletViewModelProtocol {
         do {
             let usdAmount = try await getUsdAmount(code: code, amount: amount)
             let data = WalletModel(code: code, amount: amount, usdAmmount: usdAmount)
-            
-            currentWalletArray.append(data)
-            walletData.onNext(currentWalletArray)
+            realmManager.saveWalletModels(walletModels: data)
+            fetch()
         } catch {
             print(error.localizedDescription)
         }
@@ -38,9 +43,18 @@ class WalletViewModel: WalletViewModelProtocol {
         let (data, _) = try await URLSession.shared.data(from: url)
         let response = try JSONDecoder().decode(UsdRateModel.self, from: data)
         let usdAmount = response.conversionRate * amount
-        print(usdAmount)
         return usdAmount
     }
     
+    func initData() {
+        fetch()
+    }
+    
+    private func fetch() {
+        realmManager.loadWalletModels { loaded in
+            self.walletData.onNext(loaded)
+            print(loaded)
+        }
+    }
     
 }

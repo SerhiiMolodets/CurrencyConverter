@@ -38,6 +38,9 @@ class SelectViewController: BaseViewController, Storyboarded {
     
     private func setupTableView() {
         viewModel.countries
+            .map { countries in
+                countries.sorted { $0.key < $1.key }
+            }
             .bind(to: selectTableView.rx.items(cellIdentifier: "CountryTableViewCell", cellType: CountryTableViewCell.self)) { index, item, cell in
                 cell.configure(code: item.value.currencyCode, country: item.key, currency: item.value.currencyName)
             }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class WalletViewController: BaseViewController, Storyboarded {
     
@@ -27,6 +28,8 @@ class WalletViewController: BaseViewController, Storyboarded {
         setupNavBar()
         configureUI()
         setupTableView()
+        viewModel.initData()
+        setupBalanceLabel()
     }
     
     // MARK: - Flow funcs
@@ -40,15 +43,34 @@ class WalletViewController: BaseViewController, Storyboarded {
     private func setupNavBar () {
         setupNavBar(title: "Wallet") { [weak self] in
             self?.viewModel.addCurrencySubject.onNext(())
-        } searchHandler: { searchtext in
-            print(searchtext)
+        } searchHandler: { [weak self] searchtext in
+            self?.viewModel.searchText.accept(searchtext)
         }
     }
     private func setupTableView() {
-        viewModel.walletData
+        Observable.combineLatest(viewModel.walletData, viewModel.searchText)
+            .map { walletData, searchText in
+                if searchText.isEmpty {
+                    return walletData
+                } else {
+                    return walletData.filter { $0.code.lowercased().contains(searchText.lowercased()) }
+                }
+            }
             .bind(to: waletTableView.rx.items(cellIdentifier: "WalletTableViewCell", cellType: WalletTableViewCell.self)) { index, item, cell in
                 cell.configure(item)
             }
+            .disposed(by: bag)
+    }
+    
+    private func setupBalanceLabel() {
+        viewModel.walletData
+            .map { walletData in
+                walletData.reduce(0) { $0 + $1.usdAmmount }
+            }
+            .map { String(format: "%.2f", $0) }
+            .map { "USD".getSymbolForCurrencyCode() + $0 }
+            .map { $0.createAttributedText() }
+            .bind(to: balanceLabel.rx.attributedText)
             .disposed(by: bag)
     }
 }

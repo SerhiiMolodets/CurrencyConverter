@@ -17,6 +17,7 @@ class WalletCoordinator: Coordinator {
     init(_ rootController: UINavigationController, _ viewModel: WalletViewModelProtocol) {
         self.rootController = rootController
         self.viewModel = viewModel
+        
     }
 
     override func start() {

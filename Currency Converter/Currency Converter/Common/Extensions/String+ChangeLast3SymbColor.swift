@@ -10,7 +10,7 @@ import UIKit
 
 extension String {
     func createAttributedText() -> NSAttributedString {
-        let fullRange = NSRange(location: 0, length: self.count)
+
         let attributedString = NSMutableAttributedString(string: self)
         
         if self.count >= 3 {

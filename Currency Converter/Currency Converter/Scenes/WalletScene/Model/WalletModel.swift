@@ -6,16 +6,20 @@
 //
 
 import Foundation
+import RealmSwift
 
-class WalletModel {
-    let code: String
-    let amount: Double
-    var usdAmmount: Double
+class WalletModel: Object {
+    @Persisted(primaryKey: true) var id = UUID().uuidString
+    @Persisted var code: String = ""
+    @Persisted var amount: Double = 0.0
+    @Persisted var usdAmmount: Double = 0.0
+    
     var stringAmount: String {
         return String(format: "%.2f", amount)
     }
     
-    init(code: String, amount: Double, usdAmmount: Double) {
+    convenience init(code: String, amount: Double, usdAmmount: Double) {
+        self.init()
         self.code = code
         self.amount = amount
         self.usdAmmount = usdAmmount
