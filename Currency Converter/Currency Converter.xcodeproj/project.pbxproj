@@ -81,6 +81,7 @@
 		08ECA9C12A7FDC11003C5799 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 08ECA9C02A7FDC11003C5799 /* Swinject */; };
 		08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */; };
 		08ECA9C82A7FF445003C5799 /* SelectCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */; };
+		08F159272A83E272002E6112 /* SelectViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159262A83E272002E6112 /* SelectViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,7 @@
 		08ECA9BD2A7FDB98003C5799 /* SettingsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainer.swift; sourceTree = "<group>"; };
 		08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListContainer.swift; sourceTree = "<group>"; };
 		08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCell.swift; sourceTree = "<group>"; };
+		08F159262A83E272002E6112 /* SelectViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		084193202A818A7200D64C78 /* SelectController */ = {
 			isa = PBXGroup;
 			children = (
+				08F159252A83E257002E6112 /* Protocol */,
 				084193212A818AB000D64C78 /* SelectViewController.swift */,
 				084193232A818AC000D64C78 /* SelectViewController.storyboard */,
 				084193262A818CA600D64C78 /* Cell */,
@@ -585,6 +588,14 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		08F159252A83E257002E6112 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				08F159262A83E272002E6112 /* SelectViewModelProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -697,6 +708,7 @@
 				08ECA9612A7D8193003C5799 /* MainTabBarCoordinator.swift in Sources */,
 				08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */,
 				08E4F3E52A829AD6009817E7 /* RealmContainer.swift in Sources */,
+				08F159272A83E272002E6112 /* SelectViewModelProtocol.swift in Sources */,
 				08C7BE392A815A870020E120 /* WalletModel.swift in Sources */,
 				08C7BE442A8163F80020E120 /* UsdRateModel.swift in Sources */,
 				08ECA9BB2A7FDA19003C5799 /* SettingViewModelProtocol.swift in Sources */,

@@ -67,6 +67,7 @@ class AddCurrencyViewController: BaseViewController {
         viewModel.selectedCountry
             .subscribe(onNext:  { [weak self] item in
                 guard let self else { return }
+                viewModel.currentCode = item.1.currencyCode
                 selectCountryView.configure(country: item.0, currency: item.1.currencyName, code: item.1.currencyCode)
             }).disposed(by: bag)
         let buttonObserver = addButton.rx.tap

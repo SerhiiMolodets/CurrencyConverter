@@ -15,9 +15,84 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid Value (CAD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRz-OH-rDX">
+                                <rect key="frame" x="20" y="77" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TK4-bt-1KA">
+                                <rect key="frame" x="20" y="107" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Country Currency (From)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCE-1N-UYy">
+                                <rect key="frame" x="20" y="159" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Country Currency (To)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF9-S9-cVh">
+                                <rect key="frame" x="20" y="283" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Kv-ar-Mpn" customClass="SelectCountryView" customModule="Currency_Converter" customModuleProvider="target">
+                                <rect key="frame" x="20" y="189" width="353" height="76"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="DBM-hn-oEq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oC-wc-6Nu" customClass="SelectCountryView" customModule="Currency_Converter" customModuleProvider="target">
+                                <rect key="frame" x="20" y="313" width="353" height="76"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1i2-kn-KCV">
+                                <rect key="frame" x="20" y="755" width="353" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="4GY-sP-Gm9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Z8L-zL-9l9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TK4-bt-1KA" firstAttribute="top" secondItem="rRz-OH-rDX" secondAttribute="bottom" constant="9" id="1q3-rH-11e"/>
+                            <constraint firstItem="TK4-bt-1KA" firstAttribute="leading" secondItem="rRz-OH-rDX" secondAttribute="leading" id="3B4-D6-B2A"/>
+                            <constraint firstItem="9oC-wc-6Nu" firstAttribute="top" secondItem="IF9-S9-cVh" secondAttribute="bottom" constant="9" id="7aN-e3-FwI"/>
+                            <constraint firstItem="rRz-OH-rDX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="9Ws-Wi-BgH"/>
+                            <constraint firstItem="IF9-S9-cVh" firstAttribute="leading" secondItem="1Kv-ar-Mpn" secondAttribute="leading" id="CSY-oo-Qx3"/>
+                            <constraint firstItem="9oC-wc-6Nu" firstAttribute="height" secondItem="1Kv-ar-Mpn" secondAttribute="height" id="F5h-zk-Zub"/>
+                            <constraint firstItem="9oC-wc-6Nu" firstAttribute="leading" secondItem="1Kv-ar-Mpn" secondAttribute="leading" id="Iax-4K-P2I"/>
+                            <constraint firstItem="1Kv-ar-Mpn" firstAttribute="leading" secondItem="TK4-bt-1KA" secondAttribute="leading" id="KnA-cv-PUJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1i2-kn-KCV" secondAttribute="trailing" constant="20" id="OiW-dN-pOc"/>
+                            <constraint firstItem="IF9-S9-cVh" firstAttribute="top" secondItem="1Kv-ar-Mpn" secondAttribute="bottom" constant="18" id="Q0L-hI-A7E"/>
+                            <constraint firstItem="ZCE-1N-UYy" firstAttribute="leading" secondItem="TK4-bt-1KA" secondAttribute="leading" id="Yqs-7m-8BS"/>
+                            <constraint firstItem="1Kv-ar-Mpn" firstAttribute="top" secondItem="ZCE-1N-UYy" secondAttribute="bottom" constant="9" id="dip-QF-1MR"/>
+                            <constraint firstItem="rRz-OH-rDX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="18" id="e8v-jw-Vxz"/>
+                            <constraint firstItem="9oC-wc-6Nu" firstAttribute="trailing" secondItem="1Kv-ar-Mpn" secondAttribute="trailing" id="fJh-0M-oTH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TK4-bt-1KA" secondAttribute="trailing" constant="20" id="iIt-Ks-Q54"/>
+                            <constraint firstItem="1Kv-ar-Mpn" firstAttribute="trailing" secondItem="TK4-bt-1KA" secondAttribute="trailing" id="iaR-hs-Ekx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1i2-kn-KCV" secondAttribute="bottom" constant="21" id="pwt-uh-3OB"/>
+                            <constraint firstItem="ZCE-1N-UYy" firstAttribute="top" secondItem="TK4-bt-1KA" secondAttribute="bottom" constant="18" id="xQ2-o3-b0W"/>
+                            <constraint firstItem="1i2-kn-KCV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="yTw-vz-ePm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="1i2-kn-KCV" id="4Jb-jO-jsk"/>
+                        <outlet property="amountTextField" destination="TK4-bt-1KA" id="jE1-ZY-ATd"/>
+                        <outlet property="fromCountryView" destination="1Kv-ar-Mpn" id="TSy-KV-DEj"/>
+                        <outlet property="fromLabel" destination="ZCE-1N-UYy" id="OMK-b3-5Zy"/>
+                        <outlet property="toCountryView" destination="9oC-wc-6Nu" id="BSI-Ib-xRr"/>
+                        <outlet property="toLabel" destination="IF9-S9-cVh" id="SOI-jR-6a5"/>
+                        <outlet property="topTitleLabel" destination="rRz-OH-rDX" id="yKM-vz-01F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

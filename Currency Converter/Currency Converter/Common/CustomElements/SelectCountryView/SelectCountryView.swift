@@ -9,7 +9,6 @@ import UIKit
 
 class SelectCountryView: UIView {
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var countyContainerView: UIView!
     @IBOutlet weak var flagView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!

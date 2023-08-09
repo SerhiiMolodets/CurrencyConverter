@@ -12,7 +12,7 @@ import RxCocoa
 class SelectViewController: BaseViewController {
     
     // MARK: - Properties
-    var viewModel: WalletViewModelProtocol!
+    var viewModel: SelectViewModelProtocol!
     
     // MARK: - IBOutlets
     @IBOutlet weak var selectTableView: UITableView! {
@@ -44,7 +44,7 @@ class SelectViewController: BaseViewController {
     }
     
     private func setupTableView() {
-        viewModel.countries
+        Observable.just(CountryManager.shared.currencyData)
             .map { countries in
                 countries.sorted { $0.key < $1.key }
             }
@@ -59,7 +59,7 @@ class SelectViewController: BaseViewController {
             .disposed(by: bag)
         
         selectedItemObservable
-            .subscribe { [weak self] _ in
+            .subscribe { [weak self] item in
                 self?.viewModel.backSubject.onNext(())
             }.disposed(by: bag)
     }

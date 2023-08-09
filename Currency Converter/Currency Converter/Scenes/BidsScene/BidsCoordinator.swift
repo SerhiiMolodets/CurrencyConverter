@@ -47,6 +47,11 @@ class BidsCoordinator: Coordinator {
     private func backToPrevious() {
         rootController.popViewController(animated: true)
     }
+    private func openSelectController() {
+        let viewController = SelectViewController.instantiate(coordinator: self)
+        viewController.viewModel = viewModel
+        rootController.pushViewController(viewController, animated: true)
+    }
     
     // MARK: - Bindings funcs
     private func setupBindings() {
@@ -59,5 +64,10 @@ class BidsCoordinator: Coordinator {
             .subscribe(onNext: { [weak self] _ in
                 self?.backToPrevious()
             }).disposed(by: bag)
+        viewModel.selectSubject
+            .subscribe(onNext: { [weak self] _ in
+                self?.openSelectController()
+            })
+            .disposed(by: bag)
     }
 }
