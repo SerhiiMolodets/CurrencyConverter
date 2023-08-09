@@ -18,7 +18,7 @@ protocol WalletViewModelProtocol {
     var selectedCountry: PublishSubject<(String, CurrencyCodeAndName)> { get }
     var walletData: PublishSubject<[WalletModel]> { get }
     var currentCode: String { get set }
-    var realmManager: RealmManagerProtocol! { get set }
+    var realmManager: RealmManagerWalletProtocol! { get set }
     
     func addCurrency(code: String, amount: Double) async throws
     func initData()

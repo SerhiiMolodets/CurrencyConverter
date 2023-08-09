@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class RealmManager: RealmManagerProtocol {
+class RealmManager: RealmManagerWalletProtocol {
     
     func saveWalletModels(walletModels: WalletModel) {
         DispatchQueue.main.async {

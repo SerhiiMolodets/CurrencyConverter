@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class WalletViewController: BaseViewController, Storyboarded {
+class WalletViewController: BaseViewController {
     
     // MARK: - Properties
     var viewModel: WalletViewModelProtocol!

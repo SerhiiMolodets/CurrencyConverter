@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RealmManagerProtocol {
+protocol RealmManagerWalletProtocol {
     func saveWalletModels(walletModels: WalletModel)
     func loadWalletModels(completion: @escaping([WalletModel]) -> Void)
     func cleanAll()

@@ -30,7 +30,17 @@
 		08E4F3E12A8299A0009817E7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 08E4F3E02A8299A0009817E7 /* Realm */; };
 		08E4F3E32A8299A0009817E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08E4F3E22A8299A0009817E7 /* RealmSwift */; };
 		08E4F3E52A829AD6009817E7 /* RealmContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3E42A829AD6009817E7 /* RealmContainer.swift */; };
-		08E4F3E92A829B2A009817E7 /* RealmManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3E82A829B2A009817E7 /* RealmManagerProtocol.swift */; };
+		08E4F3E92A829B2A009817E7 /* RealmManagerWalletProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3E82A829B2A009817E7 /* RealmManagerWalletProtocol.swift */; };
+		08E4F3EF2A82D512009817E7 /* BidsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3ED2A82D512009817E7 /* BidsTableViewCell.swift */; };
+		08E4F3F02A82D512009817E7 /* BidsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E4F3EE2A82D512009817E7 /* BidsTableViewCell.xib */; };
+		08E4F3F42A82D9BF009817E7 /* AddBidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3F32A82D9BF009817E7 /* AddBidViewController.swift */; };
+		08E4F3F62A82D9CE009817E7 /* AddBidViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E4F3F52A82D9CE009817E7 /* AddBidViewController.storyboard */; };
+		08E4F3FB2A82DA70009817E7 /* BidsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3FA2A82DA70009817E7 /* BidsViewModelProtocol.swift */; };
+		08E4F3FD2A82DA9D009817E7 /* BidsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3FC2A82DA9D009817E7 /* BidsViewModel.swift */; };
+		08E4F3FF2A82DC42009817E7 /* BidsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F3FE2A82DC42009817E7 /* BidsContainer.swift */; };
+		08E4F4032A839F86009817E7 /* SelectCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F4022A839F86009817E7 /* SelectCountryView.swift */; };
+		08E4F4052A83A9A3009817E7 /* UIView+fixInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E4F4042A83A9A3009817E7 /* UIView+fixInView.swift */; };
+		08E4F4072A83AA58009817E7 /* SelectCountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E4F4062A83AA58009817E7 /* SelectCountryView.xib */; };
 		08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9482A7D7F00003C5799 /* AppDelegate.swift */; };
 		08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA94A2A7D7F00003C5799 /* SceneDelegate.swift */; };
 		08ECA9522A7D7F01003C5799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08ECA9512A7D7F01003C5799 /* Assets.xcassets */; };
@@ -93,7 +103,17 @@
 		08E4F3DA2A829599009817E7 /* String+ChangeLast3SymbColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ChangeLast3SymbColor.swift"; sourceTree = "<group>"; };
 		08E4F3DD2A829867009817E7 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		08E4F3E42A829AD6009817E7 /* RealmContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmContainer.swift; sourceTree = "<group>"; };
-		08E4F3E82A829B2A009817E7 /* RealmManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerProtocol.swift; sourceTree = "<group>"; };
+		08E4F3E82A829B2A009817E7 /* RealmManagerWalletProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerWalletProtocol.swift; sourceTree = "<group>"; };
+		08E4F3ED2A82D512009817E7 /* BidsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsTableViewCell.swift; sourceTree = "<group>"; };
+		08E4F3EE2A82D512009817E7 /* BidsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BidsTableViewCell.xib; sourceTree = "<group>"; };
+		08E4F3F32A82D9BF009817E7 /* AddBidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBidViewController.swift; sourceTree = "<group>"; };
+		08E4F3F52A82D9CE009817E7 /* AddBidViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBidViewController.storyboard; sourceTree = "<group>"; };
+		08E4F3FA2A82DA70009817E7 /* BidsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsViewModelProtocol.swift; sourceTree = "<group>"; };
+		08E4F3FC2A82DA9D009817E7 /* BidsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsViewModel.swift; sourceTree = "<group>"; };
+		08E4F3FE2A82DC42009817E7 /* BidsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsContainer.swift; sourceTree = "<group>"; };
+		08E4F4022A839F86009817E7 /* SelectCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCountryView.swift; sourceTree = "<group>"; };
+		08E4F4042A83A9A3009817E7 /* UIView+fixInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+fixInView.swift"; sourceTree = "<group>"; };
+		08E4F4062A83AA58009817E7 /* SelectCountryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectCountryView.xib; sourceTree = "<group>"; };
 		08ECA9452A7D7F00003C5799 /* Currency Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08ECA9482A7D7F00003C5799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08ECA94A2A7D7F00003C5799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,9 +275,80 @@
 		08E4F3E72A829B13009817E7 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				08E4F3E82A829B2A009817E7 /* RealmManagerProtocol.swift */,
+				08E4F3E82A829B2A009817E7 /* RealmManagerWalletProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		08E4F3EA2A82D4E6009817E7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F3ED2A82D512009817E7 /* BidsTableViewCell.swift */,
+				08E4F3EE2A82D512009817E7 /* BidsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		08E4F3F12A82D964009817E7 /* BidsController */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA97E2A7D972A003C5799 /* BidsViewController.swift */,
+				08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */,
+			);
+			path = BidsController;
+			sourceTree = "<group>";
+		};
+		08E4F3F22A82D98E009817E7 /* AddBidController */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F3F32A82D9BF009817E7 /* AddBidViewController.swift */,
+				08E4F3F52A82D9CE009817E7 /* AddBidViewController.storyboard */,
+			);
+			path = AddBidController;
+			sourceTree = "<group>";
+		};
+		08E4F3F72A82DA33009817E7 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F3FE2A82DC42009817E7 /* BidsContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		08E4F3F82A82DA3B009817E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F3F92A82DA53009817E7 /* Protocol */,
+				08E4F3FC2A82DA9D009817E7 /* BidsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		08E4F3F92A82DA53009817E7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F3FA2A82DA70009817E7 /* BidsViewModelProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		08E4F4002A839F21009817E7 /* SelectCountryView */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F4022A839F86009817E7 /* SelectCountryView.swift */,
+				08E4F4062A83AA58009817E7 /* SelectCountryView.xib */,
+			);
+			path = SelectCountryView;
+			sourceTree = "<group>";
+		};
+		08E4F4012A839F47009817E7 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F4002A839F21009817E7 /* SelectCountryView */,
+				08ECA96A2A7D8916003C5799 /* Storyboarded.swift */,
+				08C7BE2F2A80F88D0020E120 /* BaseViewController.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		08ECA93C2A7D7F00003C5799 = {
@@ -328,12 +419,11 @@
 		08ECA9692A7D88EC003C5799 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08E4F4012A839F47009817E7 /* CustomElements */,
 				08E4F3DC2A829824009817E7 /* Managers */,
 				08ECA9992A7E8E29003C5799 /* Fonts */,
 				08ECA9712A7D8D8D003C5799 /* Extensions */,
 				08ECA9A02A7E9FDB003C5799 /* Data */,
-				08ECA96A2A7D8916003C5799 /* Storyboarded.swift */,
-				08C7BE2F2A80F88D0020E120 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -354,6 +444,7 @@
 				08ECA9722A7D8DB0003C5799 /* UIColoro+appColoros.swift */,
 				08C7BE2D2A80E8940020E120 /* String+CurrencySymbol.swift */,
 				08E4F3DA2A829599009817E7 /* String+ChangeLast3SymbColor.swift */,
+				08E4F4042A83A9A3009817E7 /* UIView+fixInView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,8 +475,10 @@
 		08ECA97A2A7D9266003C5799 /* BidsScene */ = {
 			isa = PBXGroup;
 			children = (
+				08E4F3F72A82DA33009817E7 /* DI */,
 				08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */,
 				08ECA97B2A7D928C003C5799 /* View */,
+				08E4F3F82A82DA3B009817E7 /* ViewModel */,
 			);
 			path = BidsScene;
 			sourceTree = "<group>";
@@ -393,8 +486,9 @@
 		08ECA97B2A7D928C003C5799 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				08ECA97E2A7D972A003C5799 /* BidsViewController.swift */,
-				08ECA9802A7D9735003C5799 /* BidsViewController.storyboard */,
+				08E4F3F12A82D964009817E7 /* BidsController */,
+				08E4F3EA2A82D4E6009817E7 /* Cell */,
+				08E4F3F22A82D98E009817E7 /* AddBidController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,13 +658,16 @@
 			files = (
 				0841932C2A818D1300D64C78 /* CountryTableViewCell.xib in Resources */,
 				08ECA9702A7D8982003C5799 /* WalletViewController.storyboard in Resources */,
+				08E4F3F62A82D9CE009817E7 /* AddBidViewController.storyboard in Resources */,
 				08ECA9812A7D9735003C5799 /* BidsViewController.storyboard in Resources */,
 				08ECA9A22A7E9FF0003C5799 /* CountryCurrencies.json in Resources */,
+				08E4F4072A83AA58009817E7 /* SelectCountryView.xib in Resources */,
 				08C7BE312A8137D30020E120 /* Montserrat-SemiBold.ttf in Resources */,
 				08ECA9552A7D7F01003C5799 /* LaunchScreen.storyboard in Resources */,
 				0885BBB52A8190280091F955 /* Montserrat-Regular.ttf in Resources */,
 				08ECA9522A7D7F01003C5799 /* Assets.xcassets in Resources */,
 				08ECA99B2A7E8E62003C5799 /* Montserrat.ttf in Resources */,
+				08E4F3F02A82D512009817E7 /* BidsTableViewCell.xib in Resources */,
 				08C7BE362A8138FB0020E120 /* WalletTableViewCell.xib in Resources */,
 				08C7BE4A2A81683B0020E120 /* AddCurrencyViewController.storyboard in Resources */,
 				08C7BE322A8137D50020E120 /* Inter-Medium.otf in Resources */,
@@ -590,9 +687,12 @@
 				08ECA9AC2A7FAAC2003C5799 /* NavigationBarView.swift in Sources */,
 				08ECA95F2A7D80A9003C5799 /* AppCoordinator.swift in Sources */,
 				08C7BE352A8138FB0020E120 /* WalletTableViewCell.swift in Sources */,
+				08E4F3FF2A82DC42009817E7 /* BidsContainer.swift in Sources */,
+				08E4F3EF2A82D512009817E7 /* BidsTableViewCell.swift in Sources */,
 				08C7BE3D2A815FB10020E120 /* WalletViewModelProtocol.swift in Sources */,
 				08ECA9632A7D81CF003C5799 /* MainTabBarViewController.swift in Sources */,
 				08ECA9B82A7FD504003C5799 /* SelectCurrencyView.swift in Sources */,
+				08E4F3FD2A82DA9D009817E7 /* BidsViewModel.swift in Sources */,
 				08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */,
 				08ECA9612A7D8193003C5799 /* MainTabBarCoordinator.swift in Sources */,
 				08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */,
@@ -604,14 +704,17 @@
 				08ECA96E2A7D8975003C5799 /* WalletViewController.swift in Sources */,
 				08ECA94B2A7D7F00003C5799 /* SceneDelegate.swift in Sources */,
 				0841932B2A818D1300D64C78 /* CountryTableViewCell.swift in Sources */,
+				08E4F4052A83A9A3009817E7 /* UIView+fixInView.swift in Sources */,
 				08C7BE302A80F88D0020E120 /* BaseViewController.swift in Sources */,
 				08E4F3DE2A829867009817E7 /* RealmManager.swift in Sources */,
 				08C7BE2E2A80E8940020E120 /* String+CurrencySymbol.swift in Sources */,
+				08E4F4032A839F86009817E7 /* SelectCountryView.swift in Sources */,
 				08ECA9B62A7FBC60003C5799 /* SettingsViewModel.swift in Sources */,
 				084193222A818AB000D64C78 /* SelectViewController.swift in Sources */,
 				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
 				08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */,
 				08ECA9682A7D873A003C5799 /* WalletCoordinator.swift in Sources */,
+				08E4F3F42A82D9BF009817E7 /* AddBidViewController.swift in Sources */,
 				08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */,
 				08ECA9A42A7EA14E003C5799 /* CountryCurrenciesModel.swift in Sources */,
 				08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */,
@@ -621,13 +724,14 @@
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
 				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
 				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,
+				08E4F3FB2A82DA70009817E7 /* BidsViewModelProtocol.swift in Sources */,
 				08ECA9BE2A7FDB98003C5799 /* SettingsContainer.swift in Sources */,
 				08ECA9792A7D90F5003C5799 /* CurrencyListView.swift in Sources */,
 				08ECA9732A7D8DB0003C5799 /* UIColoro+appColoros.swift in Sources */,
 				08ECA9A62A7EA33B003C5799 /* CountryManager.swift in Sources */,
 				08C7BE3F2A815FC80020E120 /* WalletViewModel.swift in Sources */,
 				08C7BE482A81682B0020E120 /* AddCurrencyViewController.swift in Sources */,
-				08E4F3E92A829B2A009817E7 /* RealmManagerProtocol.swift in Sources */,
+				08E4F3E92A829B2A009817E7 /* RealmManagerWalletProtocol.swift in Sources */,
 				08ECA9762A7D9028003C5799 /* CurrencyListCoordinator.swift in Sources */,
 				08ECA99D2A7E9445003C5799 /* ErrorView.swift in Sources */,
 			);

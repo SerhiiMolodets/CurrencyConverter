@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 import RxSwift
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, Storyboarded {
     
     private var cancellable: AnyCancellable!
     let bag = DisposeBag()

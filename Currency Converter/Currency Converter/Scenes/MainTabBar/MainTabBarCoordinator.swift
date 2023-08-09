@@ -28,7 +28,7 @@ class MainTabBarCoordinator: Coordinator {
     // MARK: - Navigation funcs
     private func addWalletPage() {
         guard var viewModel = Container.wallet.resolve(WalletViewModelProtocol.self) else { return }
-        guard let realmManager = Container.realm.resolve(RealmManagerProtocol.self) else { return }
+        guard let realmManager = Container.realm.resolve(RealmManagerWalletProtocol.self) else { return }
         viewModel.realmManager = realmManager
         let coordinator = WalletCoordinator(UINavigationController(), viewModel)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
@@ -44,7 +44,8 @@ class MainTabBarCoordinator: Coordinator {
     }
     
     private func addBidsPage() {
-        let coordinator = BidsCoordinator(UINavigationController())
+        guard let viewModel = Container.bids.resolve(BidsViewModelProtocol.self) else { return }
+        let coordinator = BidsCoordinator(UINavigationController(), viewModel)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)
         coordinator.start()

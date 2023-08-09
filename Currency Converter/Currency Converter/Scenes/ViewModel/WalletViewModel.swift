@@ -22,7 +22,7 @@ class WalletViewModel: WalletViewModelProtocol {
     private var currentWalletArray: [WalletModel] = []
     var currentCode: String = ""
     
-    var realmManager: RealmManagerProtocol!
+    var realmManager: RealmManagerWalletProtocol!
     
     
     

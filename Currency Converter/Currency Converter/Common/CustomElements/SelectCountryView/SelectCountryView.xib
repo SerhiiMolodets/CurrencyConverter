@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectCountryView" customModule="Currency_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="M4e-Ul-WaH"/>
+                <outlet property="countryLabel" destination="nIY-iY-OVa" id="Qis-26-7v7"/>
+                <outlet property="countyContainerView" destination="oCE-pg-K41" id="Vjd-iw-3i8"/>
+                <outlet property="currencyLabel" destination="pOY-Ed-7Wq" id="KdO-8L-lAe"/>
+                <outlet property="flagView" destination="cJs-C4-MEb" id="Gb5-1Q-dYo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="175"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCE-pg-K41">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="175"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="cJs-C4-MEb">
+                            <rect key="frame" x="21" y="65.666666666666671" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Fm0-Xz-UBZ"/>
+                                <constraint firstAttribute="width" constant="44" id="djf-nm-zCA"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-vQ-q8O">
+                            <rect key="frame" x="357.66666666666669" y="79" width="11.333333333333314" height="17.333333333333329"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="11.5" id="0lY-hK-PIW"/>
+                                <constraint firstAttribute="height" constant="21" id="zVR-r4-Y9c"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4Yv-U2-oiV">
+                            <rect key="frame" x="83.666666666666657" y="67.333333333333329" width="122.66666666666666" height="40.666666666666671"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United Kingdom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIY-iY-OVa">
+                                    <rect key="frame" x="0.0" y="0.0" width="122.66666666666667" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sterling (GBP)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOY-Ed-7Wq">
+                                    <rect key="frame" x="0.0" y="20.333333333333343" width="108.33333333333334" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="tOl-vQ-q8O" firstAttribute="centerY" secondItem="cJs-C4-MEb" secondAttribute="centerY" id="61f-Yb-JDv"/>
+                        <constraint firstItem="4Yv-U2-oiV" firstAttribute="centerY" secondItem="oCE-pg-K41" secondAttribute="centerY" id="6gZ-sh-3PQ"/>
+                        <constraint firstAttribute="trailing" secondItem="tOl-vQ-q8O" secondAttribute="trailing" constant="24" id="aj3-h5-BjX"/>
+                        <constraint firstItem="cJs-C4-MEb" firstAttribute="leading" secondItem="oCE-pg-K41" secondAttribute="leading" constant="21" id="b4l-Fe-M35"/>
+                        <constraint firstItem="cJs-C4-MEb" firstAttribute="centerY" secondItem="oCE-pg-K41" secondAttribute="centerY" id="nJ3-dt-D91"/>
+                        <constraint firstItem="4Yv-U2-oiV" firstAttribute="leading" secondItem="cJs-C4-MEb" secondAttribute="trailing" constant="18.68" id="rPa-vG-0Mm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oCE-pg-K41" secondAttribute="trailing" id="hHp-4w-94w"/>
+                <constraint firstItem="oCE-pg-K41" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ks0-qY-Zzk"/>
+                <constraint firstItem="oCE-pg-K41" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tmO-Pz-k4v"/>
+                <constraint firstAttribute="bottom" secondItem="oCE-pg-K41" secondAttribute="bottom" id="udA-gj-yUc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-34.351145038167935" y="-274.29577464788736"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Ellipse" width="44" height="44"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

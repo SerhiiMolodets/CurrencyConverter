@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SelectViewController: BaseViewController, Storyboarded {
+class SelectViewController: BaseViewController {
     
     // MARK: - Properties
     var viewModel: WalletViewModelProtocol!

@@ -30,6 +30,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="F1S-Z7-XCC" secondAttribute="bottom" id="L2G-6t-7q9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bidsTableView" destination="F1S-Z7-XCC" id="Vsx-HW-b3g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
