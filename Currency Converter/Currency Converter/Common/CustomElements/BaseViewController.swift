@@ -21,7 +21,7 @@ class BaseViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationItem.hidesBackButton = true
-        setupDismissKeyboardGesture()
+
     }
     // MARK: - Flow funcs
     func performSearch(_ searchHandler: @escaping (String) -> ()) {
@@ -49,7 +49,7 @@ class BaseViewController: UIViewController, Storyboarded {
            let dismissKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(viewTapped(_:)))
            view.addGestureRecognizer(dismissKeyboardTap)
        }
-       
+
        @objc func viewTapped(_ recognizer: UITapGestureRecognizer) {
            view.endEditing(true)
        }

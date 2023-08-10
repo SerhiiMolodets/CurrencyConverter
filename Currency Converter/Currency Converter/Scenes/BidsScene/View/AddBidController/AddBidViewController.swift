@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class AddBidViewController: BaseViewController {
     
@@ -29,6 +30,7 @@ class AddBidViewController: BaseViewController {
         setupBindings()
         addTapGesture()
         checkInput()
+        setupDismissKeyboardGesture()
     }
     // MARK: - Flow funcs
     private func setupNavBar() {
@@ -103,19 +105,25 @@ class AddBidViewController: BaseViewController {
     }
     
     private func checkInput() {
-        amountTextField.rx.text.orEmpty
-            .map { !$0.isEmpty }
-                        .subscribe(onNext: { isValid in
-                            if isValid,
-                               self.fromCountryView.isSelected,
-                               self.toCountryView.isSelected {
-                                self.addButton.backgroundColor = .addBlue
-                                self.addButton.isEnabled = true
-                            } else {
-                                self.addButton.backgroundColor = .tabBarUnselected
-                                self.addButton.isEnabled = false
-                            }
-                        })
-                        .disposed(by: bag)
+        let inputObservable = amountTextField.rx.text.orEmpty
+              .map { !$0.isEmpty }
+
+          let selectObservable = viewModel.selectedCountry
+
+          Observable.combineLatest(inputObservable, selectObservable)
+              .subscribe(onNext: { [weak self] isValid, isSelected in
+                  guard let self else { return }
+                  self.updateButtonState(isValid: isValid, isSelected: self.fromCountryView.isSelected && self.toCountryView.isSelected)
+              })
+              .disposed(by: bag)
+    }
+    private func updateButtonState(isValid: Bool, isSelected: Bool) {
+        if isValid, isSelected {
+            self.addButton.backgroundColor = .addBlue
+            self.addButton.isEnabled = true
+        } else {
+            self.addButton.backgroundColor = .tabBarUnselected
+            self.addButton.isEnabled = false
+        }
     }
 }
