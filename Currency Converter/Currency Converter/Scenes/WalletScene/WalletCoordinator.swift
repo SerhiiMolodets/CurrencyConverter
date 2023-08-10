@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class WalletCoordinator: Coordinator {
     
@@ -24,6 +25,8 @@ class WalletCoordinator: Coordinator {
         openWalletController()
         addChildCoordinator(self)
         setupBindings()
+        guard let realmManager = Container.realm.resolve(RealmManagerWalletProtocol.self) else { return }
+        viewModel.realmManager = realmManager
     }
     
     override func finish() {

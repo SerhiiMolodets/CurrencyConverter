@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class BidsCoordinator: Coordinator {
     
@@ -24,6 +25,8 @@ class BidsCoordinator: Coordinator {
         openBidsController()
         addChildCoordinator(self)
         setupBindings()
+        guard let realmManager = Container.realm.resolve(RealmManagerBidProtocol.self) else { return }
+        viewModel.realmManager = realmManager
     }
     
     override func finish() {

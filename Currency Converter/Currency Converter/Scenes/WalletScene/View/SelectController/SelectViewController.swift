@@ -44,12 +44,16 @@ class SelectViewController: BaseViewController {
     }
     
     private func setupTableView() {
+        selectTableView.separatorStyle = .none
         Observable.just(CountryManager.shared.currencyData)
             .map { countries in
                 countries.sorted { $0.key < $1.key }
             }
             .bind(to: selectTableView.rx.items(cellIdentifier: "CountryTableViewCell", cellType: CountryTableViewCell.self)) { index, item, cell in
                 cell.configure(code: item.value.currencyCode, country: item.key, currency: item.value.currencyName)
+                if index > 0 {
+                    cell.addSeparator()
+                }
             }
             .disposed(by: bag)
         

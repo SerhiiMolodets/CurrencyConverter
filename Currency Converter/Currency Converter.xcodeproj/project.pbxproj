@@ -82,6 +82,9 @@
 		08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */; };
 		08ECA9C82A7FF445003C5799 /* SelectCurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */; };
 		08F159272A83E272002E6112 /* SelectViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159262A83E272002E6112 /* SelectViewModelProtocol.swift */; };
+		08F1592A2A84D581002E6112 /* BidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159292A84D581002E6112 /* BidModel.swift */; };
+		08F1592C2A84DB59002E6112 /* RealmManagerBidProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1592B2A84DB59002E6112 /* RealmManagerBidProtocol.swift */; };
+		08F1592E2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1592D2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +159,9 @@
 		08ECA9C22A7FE682003C5799 /* CurrencyListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListContainer.swift; sourceTree = "<group>"; };
 		08ECA9C72A7FF445003C5799 /* SelectCurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyCell.swift; sourceTree = "<group>"; };
 		08F159262A83E272002E6112 /* SelectViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewModelProtocol.swift; sourceTree = "<group>"; };
+		08F159292A84D581002E6112 /* BidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidModel.swift; sourceTree = "<group>"; };
+		08F1592B2A84DB59002E6112 /* RealmManagerBidProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerBidProtocol.swift; sourceTree = "<group>"; };
+		08F1592D2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableBiewCell + addBottomBorder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				08E4F3E82A829B2A009817E7 /* RealmManagerWalletProtocol.swift */,
+				08F1592B2A84DB59002E6112 /* RealmManagerBidProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -401,7 +408,6 @@
 				08ECA9642A7D8613003C5799 /* MainTabBar */,
 				08ECA9742A7D9000003C5799 /* CurrencyListScene */,
 				08ECA9662A7D8718003C5799 /* WalletScene */,
-				08C7BE3A2A815F680020E120 /* ViewModel */,
 				08ECA97A2A7D9266003C5799 /* BidsScene */,
 				08ECA9822A7D98A3003C5799 /* SettingsScene */,
 			);
@@ -415,6 +421,7 @@
 				08C7BE402A815FE30020E120 /* DI */,
 				08C7BE372A815A6D0020E120 /* Model */,
 				08ECA96C2A7D8955003C5799 /* View */,
+				08C7BE3A2A815F680020E120 /* ViewModel */,
 			);
 			path = WalletScene;
 			sourceTree = "<group>";
@@ -448,6 +455,7 @@
 				08C7BE2D2A80E8940020E120 /* String+CurrencySymbol.swift */,
 				08E4F3DA2A829599009817E7 /* String+ChangeLast3SymbColor.swift */,
 				08E4F4042A83A9A3009817E7 /* UIView+fixInView.swift */,
+				08F1592D2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,8 +486,9 @@
 		08ECA97A2A7D9266003C5799 /* BidsScene */ = {
 			isa = PBXGroup;
 			children = (
-				08E4F3F72A82DA33009817E7 /* DI */,
 				08ECA97C2A7D92A5003C5799 /* BidsCoordinator.swift */,
+				08E4F3F72A82DA33009817E7 /* DI */,
+				08F159282A84D56C002E6112 /* Model */,
 				08ECA97B2A7D928C003C5799 /* View */,
 				08E4F3F82A82DA3B009817E7 /* ViewModel */,
 			);
@@ -594,6 +603,14 @@
 				08F159262A83E272002E6112 /* SelectViewModelProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		08F159282A84D56C002E6112 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08F159292A84D581002E6112 /* BidModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,7 +737,9 @@
 				08C7BE302A80F88D0020E120 /* BaseViewController.swift in Sources */,
 				08E4F3DE2A829867009817E7 /* RealmManager.swift in Sources */,
 				08C7BE2E2A80E8940020E120 /* String+CurrencySymbol.swift in Sources */,
+				08F1592A2A84D581002E6112 /* BidModel.swift in Sources */,
 				08E4F4032A839F86009817E7 /* SelectCountryView.swift in Sources */,
+				08F1592C2A84DB59002E6112 /* RealmManagerBidProtocol.swift in Sources */,
 				08ECA9B62A7FBC60003C5799 /* SettingsViewModel.swift in Sources */,
 				084193222A818AB000D64C78 /* SelectViewController.swift in Sources */,
 				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
@@ -729,6 +748,7 @@
 				08E4F3F42A82D9BF009817E7 /* AddBidViewController.swift in Sources */,
 				08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */,
 				08ECA9A42A7EA14E003C5799 /* CountryCurrenciesModel.swift in Sources */,
+				08F1592E2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift in Sources */,
 				08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */,
 				08ECA9C82A7FF445003C5799 /* SelectCurrencyCell.swift in Sources */,
 				08E4F3DB2A829599009817E7 /* String+ChangeLast3SymbColor.swift in Sources */,

@@ -17,5 +17,12 @@ protocol BidsViewModelProtocol: SelectViewModelProtocol {
     var selectSubject: PublishSubject<Void> { get }
     var target: Target { get set }
     var selectedCountry: PublishSubject<(String, CurrencyCodeAndName)> { get }
-    var currentCode: String { get set }
+    var fromCode: String { get set }
+    var toCode: String { get set }
+    var bidsData: PublishSubject<[BidModel]> { get set }
+    var realmManager: RealmManagerBidProtocol! {  get set }
+    
+    func initData()
+    func addBid(fromCode: String, toCode: String, amount: Double) async throws
+    func save(model: BidModel) 
 }

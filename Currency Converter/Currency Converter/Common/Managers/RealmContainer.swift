@@ -16,6 +16,9 @@ extension Container {
         container.register(RealmManagerWalletProtocol.self) { _ in
             RealmManager()
         }
+        container.register(RealmManagerBidProtocol.self) { _ in
+            RealmManager()
+        }
 
         return container
     }()

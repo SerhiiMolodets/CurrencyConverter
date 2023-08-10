@@ -80,8 +80,10 @@ class AddBidViewController: BaseViewController {
                 switch viewModel.target {
                 case .from:
                     fromCountryView.configure(country: item.0, currency: item.1.currencyName, code: item.1.currencyCode)
+                    viewModel.fromCode = item.1.currencyCode
                 case .to:
                     toCountryView.configure(country: item.0, currency: item.1.currencyName, code: item.1.currencyCode)
+                    viewModel.toCode = item.1.currencyCode
                 }
                
             }).disposed(by: bag)
@@ -92,12 +94,12 @@ class AddBidViewController: BaseViewController {
         buttonObserver
             .subscribe { [weak self] _ in
                 guard let self else { return }
-//                Task {
-//                    if let amountString = self.amountTextField.text,
-//                    let amount = Double(amountString) {
-//                        try? await self.viewModel.addCurrency(code: self.viewModel.currentCode,amount: amount)
-//                    }
-//                }
+                Task {
+                    if let amountString = self.amountTextField.text,
+                    let amount = Double(amountString) {
+                        try? await self.viewModel.addBid(fromCode: self.viewModel.fromCode, toCode: self.viewModel.toCode, amount: amount)
+                    }
+                }
          
             }.disposed(by: bag)
         
@@ -110,7 +112,7 @@ class AddBidViewController: BaseViewController {
                             if isValid,
                                self.fromCountryView.isSelected,
                                self.toCountryView.isSelected {
-                                self.addButton.backgroundColor = UIColor(red: 0.178, green: 0.251, blue: 0.508, alpha: 1)
+                                self.addButton.backgroundColor = .addBlue
                                 self.addButton.isEnabled = true
                             } else {
                                 self.addButton.backgroundColor = .tabBarUnselected

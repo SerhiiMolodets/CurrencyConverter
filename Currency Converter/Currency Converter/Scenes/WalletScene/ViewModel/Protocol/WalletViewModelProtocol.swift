@@ -14,7 +14,7 @@ protocol WalletViewModelProtocol: SelectViewModelProtocol {
     var searchText: BehaviorRelay<String> { get }
     var selectSubject:PublishSubject<Void> { get }
     var walletData: PublishSubject<[WalletModel]> { get }
-
+    var currentCode: String { get set }
     var realmManager: RealmManagerWalletProtocol! { get set }
     
     func addCurrency(code: String, amount: Double) async throws

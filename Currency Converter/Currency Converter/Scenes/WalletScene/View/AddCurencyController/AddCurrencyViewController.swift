@@ -94,7 +94,7 @@ class AddCurrencyViewController: BaseViewController {
                         .subscribe(onNext: { isValid in
                             if isValid,
                                self.selectCountryView.isSelected {
-                                self.addButton.backgroundColor = UIColor(red: 0.178, green: 0.251, blue: 0.508, alpha: 1)
+                                self.addButton.backgroundColor = .addBlue
                                 self.addButton.isEnabled = true
                             } else {
                                 self.addButton.backgroundColor = .tabBarUnselected

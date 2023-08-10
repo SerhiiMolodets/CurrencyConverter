@@ -17,7 +17,6 @@ class RealmManager: RealmManagerWalletProtocol {
                 realm.add(walletModels, update: .modified)
             }
         }
-
     }
     
     func loadWalletModels(completion: @escaping([WalletModel]) -> Void) {
@@ -39,4 +38,25 @@ class RealmManager: RealmManagerWalletProtocol {
                }
         }
     }
+}
+
+extension RealmManager: RealmManagerBidProtocol {
+    func saveBidModel(_ model: BidModel) {
+        DispatchQueue.main.async {
+            let realm = try! Realm()
+            try! realm.write {
+                model.isOpen.toggle()
+                realm.add(model, update: .modified)
+            }
+        }
+    }
+    
+    func loadBidModels(completion: @escaping ([BidModel]) -> Void) {
+        DispatchQueue.main.async {
+            let realm = try! Realm()
+            completion(Array(realm.objects(BidModel.self)))
+        }
+    }
+    
+    
 }

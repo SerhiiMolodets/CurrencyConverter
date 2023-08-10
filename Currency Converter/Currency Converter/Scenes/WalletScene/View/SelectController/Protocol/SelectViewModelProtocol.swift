@@ -11,5 +11,4 @@ import RxSwift
 protocol SelectViewModelProtocol {
     var backSubject: PublishSubject<Void> { get }
     var selectedCountry: PublishSubject<(String, CurrencyCodeAndName)> { get }
-    var currentCode: String { get set }
 }

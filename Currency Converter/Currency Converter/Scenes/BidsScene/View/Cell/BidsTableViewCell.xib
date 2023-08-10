@@ -86,6 +86,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="currenciesLabel" destination="BB2-TD-uVH" id="MVa-Jn-oq7"/>
+                <outlet property="fromAmountLabel" destination="tVA-eS-sCH" id="kHU-J6-0va"/>
+                <outlet property="fromFlagView" destination="XjL-d7-gvm" id="xSw-2y-KyO"/>
+                <outlet property="statusButton" destination="veL-vQ-tqg" id="vpv-P8-ajx"/>
+                <outlet property="toAmountLabel" destination="VXA-Xt-gKO" id="iVa-9A-nv7"/>
+                <outlet property="toFlagView" destination="t17-5b-FiC" id="rxX-ym-CgQ"/>
+            </connections>
             <point key="canvasLocation" x="-62.595419847328245" y="-7.746478873239437"/>
         </tableViewCell>
     </objects>
