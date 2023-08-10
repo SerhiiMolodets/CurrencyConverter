@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct SelectCurrencyCell: View {
+    
+    // MARK: - Properties
     let code: String
     let currencyName: String
     var isSelected: Bool
+    
+    // MARK: - Content
     var body: some View {
         VStack {
             HStack {
@@ -38,10 +42,9 @@ struct SelectCurrencyCell: View {
                 .frame(height: 1)
         }
     }
-
-    
 }
 
+// MARK: - Preview
 struct SelectCurrencyCell_Previews: PreviewProvider {
     static var previews: some View {
         SelectCurrencyCell(code: "USD", currencyName: "US Dollars", isSelected: true)

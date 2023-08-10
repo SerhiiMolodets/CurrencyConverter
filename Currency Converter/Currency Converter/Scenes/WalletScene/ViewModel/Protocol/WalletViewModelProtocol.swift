@@ -16,6 +16,7 @@ protocol WalletViewModelProtocol: SelectViewModelProtocol {
     var walletData: PublishSubject<[WalletModel]> { get }
     var currentCode: String { get set }
     var realmManager: RealmManagerWalletProtocol! { get set }
+    var networkManager: WalletNetworkProtocol! { get set }
     
     func addCurrency(code: String, amount: Double) async throws
     func initData()

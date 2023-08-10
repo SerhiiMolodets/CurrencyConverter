@@ -20,6 +20,7 @@ class BidsViewModel: BidsViewModelProtocol {
     var bidsData = PublishSubject<[BidModel]>()
     
     var realmManager: RealmManagerBidProtocol!
+    var networkManager: BidsNetworkProtocol!
     
     var selectedCountry = PublishSubject<(String, CurrencyCodeAndName)>()
     
@@ -34,11 +35,7 @@ class BidsViewModel: BidsViewModelProtocol {
     }
     
     private func getBidAmount(amount: Double) async throws -> Double {
-        guard let url = URL(string: "https://v6.exchangerate-api.com/v6/7edcef7c0bb1f72a47090f30/pair/\(fromCode)/\(toCode)") else { return 0 }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try JSONDecoder().decode(UsdRateModel.self, from: data)
-        let amount = response.conversionRate * amount
-        return amount
+       try await networkManager.getBidAmount(from: fromCode, to: toCode, amount: amount)
     }
     func initData() {
         fetch()

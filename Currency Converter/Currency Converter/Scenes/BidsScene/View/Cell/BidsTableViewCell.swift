@@ -8,6 +8,8 @@
 import UIKit
 
 class BidsTableViewCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var fromFlagView: UIImageView!
     @IBOutlet weak var toFlagView: UIImageView!
     @IBOutlet weak var currenciesLabel: UILabel!
@@ -15,6 +17,7 @@ class BidsTableViewCell: UITableViewCell {
     @IBOutlet weak var toAmountLabel: UILabel!
     @IBOutlet weak var statusButton: UIButton!
     
+    // MARK: - Flow funcs
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()

@@ -35,7 +35,8 @@ class MainTabBarCoordinator: Coordinator {
     }
     
     private func addCurrencyListPage() {
-        let coordinator = CurrencyListCoordinator(UINavigationController())
+        guard let viewModel = Container.currencyList.resolve(CurrencyListViewModel.self) else { return }
+        let coordinator = CurrencyListCoordinator(UINavigationController(), viewModel: viewModel)
         rootTabBarController.viewControllers?.append(coordinator.rootController)
         addChildCoordinator(coordinator)
         coordinator.start()

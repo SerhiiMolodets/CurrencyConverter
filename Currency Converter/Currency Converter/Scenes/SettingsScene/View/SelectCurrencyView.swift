@@ -12,7 +12,7 @@ struct SelectCurrencyView: View {
     // MARK: - Properties
     var viewModel: SettingsViewModelProtocol
     @Environment(\.presentationMode) var presentationMode
-    // MARK: - Content view
+    // MARK: - Content
     var body: some View {
         VStack {
                 NavigationBarView(title: "Selected Currency", isBackButtonVisible: true)
@@ -28,12 +28,10 @@ struct SelectCurrencyView: View {
             }
             .listStyle(PlainListStyle())
         }
-
-
     }
 }
 
-// MARK: - Content preview
+// MARK: - Preview
 struct SelectCurrencyView_Previews: PreviewProvider {
     static var previews: some View {
         SelectCurrencyView(viewModel: SettingsViewModel())

@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct NavigationBarView: View {
+    
+    // MARK: - Properties
     @Environment(\.presentationMode) var presentationMode
     let title: String
     var isBackButtonVisible: Bool
     var backAction: (() -> Void)?
+    
+    // MARK: - Content
     var body: some View {
         VStack {
             HStack {
@@ -40,11 +44,11 @@ struct NavigationBarView: View {
             Divider()
                 .background(Color(uiColor: .tabBarUnselected))
                 .frame(height: 1)
-            
         }
     }
 }
 
+// MARK: - Preview
 struct NavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationBarView(title: "test", isBackButtonVisible: true)

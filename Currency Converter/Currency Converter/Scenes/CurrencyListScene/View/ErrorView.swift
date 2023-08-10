@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ErrorView: View {
+    
+    // MARK: - Properties
     var action: () -> Void
     
+    // MARK: - Content
     var body: some View {
         VStack {
             Image("warning")
@@ -30,6 +33,7 @@ struct ErrorView: View {
     }
 }
 
+// MARK: - Preview
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View { ErrorView {} }
 }

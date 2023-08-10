@@ -27,6 +27,8 @@ class WalletCoordinator: Coordinator {
         setupBindings()
         guard let realmManager = Container.realm.resolve(RealmManagerWalletProtocol.self) else { return }
         viewModel.realmManager = realmManager
+        guard let networkManager = Container.network.resolve(WalletNetworkProtocol.self) else { return }
+        viewModel.networkManager = networkManager
     }
     
     override func finish() {

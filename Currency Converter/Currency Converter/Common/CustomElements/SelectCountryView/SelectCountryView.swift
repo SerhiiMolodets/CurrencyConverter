@@ -8,13 +8,17 @@
 import UIKit
 
 class SelectCountryView: UIView {
+    // MARK: - Properties
+    var isSelected = false
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var countyContainerView: UIView!
     @IBOutlet weak var flagView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
-    var isSelected = false
 
+    // MARK: - Lifecycle funcs
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -24,6 +28,8 @@ class SelectCountryView: UIView {
         super.init(coder: coder)
         commonInit()
     }
+    
+    // MARK: - Flow funcs
     func commonInit(){
         Bundle.main.loadNibNamed("SelectCountryView", owner: self)
         contentView.fixInView(self)

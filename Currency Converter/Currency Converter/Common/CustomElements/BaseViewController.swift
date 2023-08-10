@@ -12,14 +12,17 @@ import RxSwift
 
 class BaseViewController: UIViewController, Storyboarded {
     
+    // MARK: - Properties
     private var cancellable: AnyCancellable!
     let bag = DisposeBag()
     let model = MyModel()
+    
+    // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationItem.hidesBackButton = true
     }
-    
+    // MARK: - Flow funcs
     func performSearch(_ searchHandler: @escaping (String) -> ()) {
         self.cancellable = model.$searchText
             .removeDuplicates()
@@ -43,6 +46,7 @@ class BaseViewController: UIViewController, Storyboarded {
 }
 
 
+// MARK: - Data adapter from swiftUI
 class MyModel: ObservableObject {
     @Published var searchText: String = ""
     var title = ""

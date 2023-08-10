@@ -22,7 +22,7 @@ class WalletViewModel: WalletViewModelProtocol {
     var currentCode: String = ""
     
     var realmManager: RealmManagerWalletProtocol!
-    
+    var networkManager: WalletNetworkProtocol!
     
     
     
@@ -38,11 +38,7 @@ class WalletViewModel: WalletViewModelProtocol {
     }
     
     private func getUsdAmount(code: String, amount: Double) async throws -> Double {
-        guard let url = URL(string: "https://v6.exchangerate-api.com/v6/7edcef7c0bb1f72a47090f30/pair/\(code)/USD") else { return 0 }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try JSONDecoder().decode(UsdRateModel.self, from: data)
-        let usdAmount = response.conversionRate * amount
-        return usdAmount
+        try await networkManager.getUsdAmount(code: code, amount: amount)
     }
 
     

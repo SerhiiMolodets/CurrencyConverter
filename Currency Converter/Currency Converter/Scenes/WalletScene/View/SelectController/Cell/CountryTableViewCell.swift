@@ -8,15 +8,18 @@
 import UIKit
 
 class CountryTableViewCell: UITableViewCell {
+    // MARK: - IBOutlets
     @IBOutlet weak var flagView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     
+    // MARK: - Lifecycle funcs
     override func awakeFromNib() {
         super.awakeFromNib()
         configureUI()
     }
     
+    // MARK: - Flow funcs
     private func configureUI() {
         countryLabel.font = UIFont(name: "Montserrat-SemiBold", size: 17)
         currencyLabel.font = UIFont(name: "Montserrat-Regular", size: 17)

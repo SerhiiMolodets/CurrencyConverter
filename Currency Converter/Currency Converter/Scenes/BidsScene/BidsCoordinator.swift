@@ -18,17 +18,16 @@ class BidsCoordinator: Coordinator {
     init(_ rootController: UINavigationController, _ viewModel: BidsViewModelProtocol) {
         self.rootController = rootController
         self.viewModel = viewModel
-        
     }
-
     override func start() {
         openBidsController()
         addChildCoordinator(self)
         setupBindings()
         guard let realmManager = Container.realm.resolve(RealmManagerBidProtocol.self) else { return }
         viewModel.realmManager = realmManager
+        guard let networkManager = Container.network.resolve(BidsNetworkProtocol.self) else { return }
+        viewModel.networkManager = networkManager
     }
-    
     override func finish() {
         removeChildCoordinator(self)
         rootController.removeFromParent()
@@ -41,7 +40,6 @@ class BidsCoordinator: Coordinator {
         rootController.tabBarItem = UITabBarItem(title: nil, image: TabBarItems.bids.image, tag: 2)
         rootController.pushViewController(viewController, animated: true)
     }
-
     private func openAddBidController() {
         let viewController = AddBidViewController.instantiate(coordinator: self)
         viewController.viewModel = viewModel

@@ -45,7 +45,6 @@ class BidsViewController: BaseViewController {
     }
     
     private func setupTableView() {
-        
         Observable.combineLatest(viewModel.bidsData, viewModel.searchText)
             .map { bidsData, searchText in
                 if searchText.isEmpty {
@@ -67,6 +66,5 @@ class BidsViewController: BaseViewController {
                 self?.viewModel.save(model: model)
             })
             .disposed(by: bag)
-    }
-    
+    }  
 }

@@ -21,6 +21,7 @@ protocol BidsViewModelProtocol: SelectViewModelProtocol {
     var toCode: String { get set }
     var bidsData: PublishSubject<[BidModel]> { get set }
     var realmManager: RealmManagerBidProtocol! {  get set }
+    var networkManager: BidsNetworkProtocol! {  get set }
     
     func initData()
     func addBid(fromCode: String, toCode: String, amount: Double) async throws

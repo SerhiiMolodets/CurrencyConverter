@@ -10,10 +10,12 @@ import RxCocoa
 import RxSwift
 
 struct SettingsView: View {
+    
     // MARK: - Properties
     var viewModel: SettingsViewModelProtocol
     @State private var savedCode: String = "UAH"
-    // MARK: - Content view
+    
+    // MARK: - Content
     var body: some View {
         VStack {
             NavigationBarView(title: "Settings", isBackButtonVisible: false)
@@ -63,7 +65,7 @@ struct SettingsView: View {
     }
 }
 
-// MARK: - Content preview
+// MARK: - Preview
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView(viewModel: SettingsViewModel())

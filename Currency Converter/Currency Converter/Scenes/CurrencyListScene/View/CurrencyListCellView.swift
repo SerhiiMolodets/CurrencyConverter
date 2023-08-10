@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CurrencyListCellView: View {
+    
+    // MARK: - Properties
     let code: String
     let currencyName: String
     let selectedCurrency: String
@@ -15,6 +17,7 @@ struct CurrencyListCellView: View {
     var stringValue: String {
         return String(format: "%.2f", value)
     }
+    // MARK: - Content
     var body: some View {
         VStack {
             HStack {
@@ -50,6 +53,7 @@ struct CurrencyListCellView: View {
         
         
     }
+    // MARK: - Flow funcs
     private func getFirstPart() -> String {
         guard stringValue.count >= 2 else {
             return stringValue
@@ -66,6 +70,7 @@ struct CurrencyListCellView: View {
     
 }
 
+// MARK: - Preview
 struct CurrencyListCellView_Previews: PreviewProvider {
     static var previews: some View {
         CurrencyListCellView(code: "UAH", currencyName: "Ukrainian Hryvnia", selectedCurrency: "UAH", value: 3600.00)

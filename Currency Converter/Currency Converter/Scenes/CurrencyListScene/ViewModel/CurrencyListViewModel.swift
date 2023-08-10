@@ -9,9 +9,12 @@ import SwiftUI
 
 
 class CurrencyListViewModel: ObservableObject {
+    
     @Published var conversionRates: [String: Double] = [:]
     @Published var searchQuery: String = ""
     @Published var warningIsShowed: Bool = false
+    
+    var networkManager: CurrencyNetworkProtocol!
     var savedCode = ""
     var filtered: [String: Double] {
         guard !searchQuery.isEmpty else { return conversionRates }
@@ -21,25 +24,20 @@ class CurrencyListViewModel: ObservableObject {
         }
     }
     
-    init() {
-        fetch()
-    }
-    
-    
+ 
     private func getRates() async throws {
-//        guard let url = URL(string: "https://v6.exchangerate-api.com/v6/7edcef7c0bb1f72a47090f30/latest/\(savedCode)") else { return }
-//        let (data, _) = try await URLSession.shared.data(from: url)
-//        let responce = try JSONDecoder().decode(CurencyListResponceSuccess.self, from: data)
-//        DispatchQueue.main.async {
-//            self.conversionRates = responce.conversionRates
-//            self.conversionRates.removeValue(forKey: self.savedCode)
-//            self.warningIsShowed = false
-//        }
+        let responce = try await networkManager.getRates(for: savedCode)
+        DispatchQueue.main.async {
+            self.conversionRates = responce.conversionRates
+            self.conversionRates.removeValue(forKey: self.savedCode)
+            self.warningIsShowed = false
+        }
     }
     
     func fetch() {
-        if  savedCode != UserDefaults.standard.string(forKey: "selectedCurrency") ?? "UAH" {
-            savedCode = UserDefaults.standard.string(forKey: "selectedCurrency") ?? "UAH"
+        let loadedCode = UserDefaults.standard.string(forKey: "selectedCurrency") ?? "UAH"
+        if  savedCode != loadedCode {
+            savedCode = loadedCode
             Task {
                 do {
                     try await getRates()
@@ -52,6 +50,5 @@ class CurrencyListViewModel: ObservableObject {
             }
         }
     }
-    
 }
 

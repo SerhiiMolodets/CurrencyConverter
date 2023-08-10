@@ -9,10 +9,12 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
 
+    // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
     }
+    // MARK: - Flow funcs
     private func setupTabBar() {
         self.viewControllers = [UIViewController()]
         self.viewControllers = []

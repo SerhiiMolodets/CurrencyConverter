@@ -85,6 +85,13 @@
 		08F1592A2A84D581002E6112 /* BidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159292A84D581002E6112 /* BidModel.swift */; };
 		08F1592C2A84DB59002E6112 /* RealmManagerBidProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1592B2A84DB59002E6112 /* RealmManagerBidProtocol.swift */; };
 		08F1592E2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1592D2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift */; };
+		08F159352A84F3B6002E6112 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159342A84F3B6002E6112 /* Constans.swift */; };
+		08F159372A84F783002E6112 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159362A84F783002E6112 /* NetworkManager.swift */; };
+		08F159392A84F7B8002E6112 /* CurrencyNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159382A84F7B8002E6112 /* CurrencyNetworkProtocol.swift */; };
+		08F1593B2A84F7D0002E6112 /* WalletNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1593A2A84F7D0002E6112 /* WalletNetworkProtocol.swift */; };
+		08F1593D2A84F7E5002E6112 /* BidsNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1593C2A84F7E4002E6112 /* BidsNetworkProtocol.swift */; };
+		08F159402A84F8A6002E6112 /* NetworkContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F1593F2A84F8A6002E6112 /* NetworkContainer.swift */; };
+		08F159422A84FB29002E6112 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F159412A84FB29002E6112 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +169,13 @@
 		08F159292A84D581002E6112 /* BidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidModel.swift; sourceTree = "<group>"; };
 		08F1592B2A84DB59002E6112 /* RealmManagerBidProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerBidProtocol.swift; sourceTree = "<group>"; };
 		08F1592D2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableBiewCell + addBottomBorder.swift"; sourceTree = "<group>"; };
+		08F159342A84F3B6002E6112 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		08F159362A84F783002E6112 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		08F159382A84F7B8002E6112 /* CurrencyNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyNetworkProtocol.swift; sourceTree = "<group>"; };
+		08F1593A2A84F7D0002E6112 /* WalletNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletNetworkProtocol.swift; sourceTree = "<group>"; };
+		08F1593C2A84F7E4002E6112 /* BidsNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsNetworkProtocol.swift; sourceTree = "<group>"; };
+		08F1593F2A84F8A6002E6112 /* NetworkContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkContainer.swift; sourceTree = "<group>"; };
+		08F159412A84FB29002E6112 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,8 +280,8 @@
 		08E4F3DC2A829824009817E7 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				08F159312A84F379002E6112 /* NetworkManager */,
 				08E4F3E62A829B03009817E7 /* RealmManager */,
-				08E4F3E42A829AD6009817E7 /* RealmContainer.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 		08E4F3E62A829B03009817E7 /* RealmManager */ = {
 			isa = PBXGroup;
 			children = (
+				08F159302A84F36C002E6112 /* DI */,
 				08E4F3E72A829B13009817E7 /* Protocol */,
 				08E4F3DD2A829867009817E7 /* RealmManager.swift */,
 			);
@@ -403,7 +418,6 @@
 		08ECA9652A7D8669003C5799 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				08ECA95C2A7D805A003C5799 /* Coordinator.swift */,
 				08ECA95E2A7D80A9003C5799 /* AppCoordinator.swift */,
 				08ECA9642A7D8613003C5799 /* MainTabBar */,
 				08ECA9742A7D9000003C5799 /* CurrencyListScene */,
@@ -429,6 +443,7 @@
 		08ECA9692A7D88EC003C5799 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				08ECA95C2A7D805A003C5799 /* Coordinator.swift */,
 				08E4F4012A839F47009817E7 /* CustomElements */,
 				08E4F3DC2A829824009817E7 /* Managers */,
 				08ECA9992A7E8E29003C5799 /* Fonts */,
@@ -557,9 +572,8 @@
 		08ECA9A02A7E9FDB003C5799 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				08ECA9A12A7E9FF0003C5799 /* CountryCurrencies.json */,
-				08ECA9A32A7EA14E003C5799 /* CountryCurrenciesModel.swift */,
-				08ECA9A52A7EA33B003C5799 /* CountryManager.swift */,
+				08F159332A84F3A0002E6112 /* Constans */,
+				08F1592F2A84F350002E6112 /* Countries */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -611,6 +625,61 @@
 				08F159292A84D581002E6112 /* BidModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		08F1592F2A84F350002E6112 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				08ECA9A12A7E9FF0003C5799 /* CountryCurrencies.json */,
+				08ECA9A32A7EA14E003C5799 /* CountryCurrenciesModel.swift */,
+				08ECA9A52A7EA33B003C5799 /* CountryManager.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		08F159302A84F36C002E6112 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				08E4F3E42A829AD6009817E7 /* RealmContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		08F159312A84F379002E6112 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				08F1593E2A84F891002E6112 /* DI */,
+				08F159322A84F38A002E6112 /* Protocol */,
+				08F159362A84F783002E6112 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		08F159322A84F38A002E6112 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				08F159382A84F7B8002E6112 /* CurrencyNetworkProtocol.swift */,
+				08F1593A2A84F7D0002E6112 /* WalletNetworkProtocol.swift */,
+				08F1593C2A84F7E4002E6112 /* BidsNetworkProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		08F159332A84F3A0002E6112 /* Constans */ = {
+			isa = PBXGroup;
+			children = (
+				08F159342A84F3B6002E6112 /* Constans.swift */,
+				08F159412A84FB29002E6112 /* Errors.swift */,
+			);
+			path = Constans;
+			sourceTree = "<group>";
+		};
+		08F1593E2A84F891002E6112 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				08F1593F2A84F8A6002E6112 /* NetworkContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -718,11 +787,13 @@
 				08E4F3FF2A82DC42009817E7 /* BidsContainer.swift in Sources */,
 				08E4F3EF2A82D512009817E7 /* BidsTableViewCell.swift in Sources */,
 				08C7BE3D2A815FB10020E120 /* WalletViewModelProtocol.swift in Sources */,
+				08F159352A84F3B6002E6112 /* Constans.swift in Sources */,
 				08ECA9632A7D81CF003C5799 /* MainTabBarViewController.swift in Sources */,
 				08ECA9B82A7FD504003C5799 /* SelectCurrencyView.swift in Sources */,
 				08E4F3FD2A82DA9D009817E7 /* BidsViewModel.swift in Sources */,
 				08ECA9C32A7FE682003C5799 /* CurrencyListContainer.swift in Sources */,
 				08ECA9612A7D8193003C5799 /* MainTabBarCoordinator.swift in Sources */,
+				08F159372A84F783002E6112 /* NetworkManager.swift in Sources */,
 				08ECA9492A7D7F00003C5799 /* AppDelegate.swift in Sources */,
 				08E4F3E52A829AD6009817E7 /* RealmContainer.swift in Sources */,
 				08F159272A83E272002E6112 /* SelectViewModelProtocol.swift in Sources */,
@@ -740,7 +811,9 @@
 				08F1592A2A84D581002E6112 /* BidModel.swift in Sources */,
 				08E4F4032A839F86009817E7 /* SelectCountryView.swift in Sources */,
 				08F1592C2A84DB59002E6112 /* RealmManagerBidProtocol.swift in Sources */,
+				08F159402A84F8A6002E6112 /* NetworkContainer.swift in Sources */,
 				08ECA9B62A7FBC60003C5799 /* SettingsViewModel.swift in Sources */,
+				08F159422A84FB29002E6112 /* Errors.swift in Sources */,
 				084193222A818AB000D64C78 /* SelectViewController.swift in Sources */,
 				08ECA9982A7E837D003C5799 /* SearchNavigationBarView.swift in Sources */,
 				08ECA9902A7E3E0B003C5799 /* CurrencyListViewModel.swift in Sources */,
@@ -748,12 +821,14 @@
 				08E4F3F42A82D9BF009817E7 /* AddBidViewController.swift in Sources */,
 				08ECA9922A7E4A46003C5799 /* CurencyListResponceSuccess.swift in Sources */,
 				08ECA9A42A7EA14E003C5799 /* CountryCurrenciesModel.swift in Sources */,
+				08F159392A84F7B8002E6112 /* CurrencyNetworkProtocol.swift in Sources */,
 				08F1592E2A84E487002E6112 /* UITableBiewCell + addBottomBorder.swift in Sources */,
 				08ECA97D2A7D92A5003C5799 /* BidsCoordinator.swift in Sources */,
 				08ECA9C82A7FF445003C5799 /* SelectCurrencyCell.swift in Sources */,
 				08E4F3DB2A829599009817E7 /* String+ChangeLast3SymbColor.swift in Sources */,
 				08C7BE422A815FF70020E120 /* WalletContainer.swift in Sources */,
 				08ECA96B2A7D8916003C5799 /* Storyboarded.swift in Sources */,
+				08F1593B2A84F7D0002E6112 /* WalletNetworkProtocol.swift in Sources */,
 				08ECA9852A7D98DB003C5799 /* SettingsCoordinator.swift in Sources */,
 				08ECA97F2A7D972A003C5799 /* BidsViewController.swift in Sources */,
 				08E4F3FB2A82DA70009817E7 /* BidsViewModelProtocol.swift in Sources */,
@@ -763,6 +838,7 @@
 				08ECA9A62A7EA33B003C5799 /* CountryManager.swift in Sources */,
 				08C7BE3F2A815FC80020E120 /* WalletViewModel.swift in Sources */,
 				08C7BE482A81682B0020E120 /* AddCurrencyViewController.swift in Sources */,
+				08F1593D2A84F7E5002E6112 /* BidsNetworkProtocol.swift in Sources */,
 				08E4F3E92A829B2A009817E7 /* RealmManagerWalletProtocol.swift in Sources */,
 				08ECA9762A7D9028003C5799 /* CurrencyListCoordinator.swift in Sources */,
 				08ECA99D2A7E9445003C5799 /* ErrorView.swift in Sources */,

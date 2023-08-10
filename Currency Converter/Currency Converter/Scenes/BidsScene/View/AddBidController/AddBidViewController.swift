@@ -11,6 +11,7 @@ class AddBidViewController: BaseViewController {
     
     // MARK: - Properties
     var viewModel: BidsViewModelProtocol!
+    
     // MARK: - IBOutlets
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
@@ -19,9 +20,7 @@ class AddBidViewController: BaseViewController {
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var toCountryView: SelectCountryView!
     @IBOutlet weak var addButton: UIButton!
-    
-    
-    
+ 
     // MARK: - Lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,9 +99,7 @@ class AddBidViewController: BaseViewController {
                         try? await self.viewModel.addBid(fromCode: self.viewModel.fromCode, toCode: self.viewModel.toCode, amount: amount)
                     }
                 }
-         
             }.disposed(by: bag)
-        
     }
     
     private func checkInput() {
@@ -121,5 +118,4 @@ class AddBidViewController: BaseViewController {
                         })
                         .disposed(by: bag)
     }
-    
 }

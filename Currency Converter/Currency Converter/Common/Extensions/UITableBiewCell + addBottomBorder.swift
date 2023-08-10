@@ -13,7 +13,6 @@ extension UITableViewCell {
         let separator = UIView()
         separator.backgroundColor = UIColor.lightGray
         addSubview(separator)
-        
         separator.translatesAutoresizingMaskIntoConstraints = false
         separator.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         separator.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true

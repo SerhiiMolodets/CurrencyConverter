@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct SearchNavigationBarView: View {
+    
+    // MARK: - Properties
     @Binding var searchText: String
     @State private var isSearching = false
-    
     var addAction: (() -> Void)?
     var tools: [Tool]
     var title: String
+    
+    // MARK: - Content
     var body: some View {
         VStack {
             ZStack {
@@ -76,7 +79,7 @@ struct SearchNavigationBarView: View {
       
 }
 
-
+// MARK: - Preview
 struct SerachNavigationBarView_Previews: PreviewProvider {
     static var previews: some View {
         SearchNavigationBarView(searchText: .constant(""), addAction: { }, tools: [.search, .add], title: "Test title")

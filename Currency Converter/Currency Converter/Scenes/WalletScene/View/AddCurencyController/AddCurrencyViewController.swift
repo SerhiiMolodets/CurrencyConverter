@@ -14,8 +14,6 @@ class AddCurrencyViewController: BaseViewController {
     // MARK: - Properties
     var viewModel: WalletViewModelProtocol!
 
-   
-    
     // MARK: - IBOutlets
     @IBOutlet weak var topTitleLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!

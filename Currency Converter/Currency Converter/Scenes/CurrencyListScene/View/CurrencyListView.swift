@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct CurrencyListView: View {
+    
+    // MARK: - Properties
     @EnvironmentObject var viewModel: CurrencyListViewModel
     @State private var isSearching = false
+    
+    // MARK: - Content
     var body: some View {
         VStack {
             SearchNavigationBarView(searchText: $viewModel.searchQuery, tools: [.search], title: "Currency List")
@@ -43,7 +47,7 @@ struct CurrencyListView: View {
         }
         
     }
-    
+    // MARK: - Flow funcs
     private func getAttributedTitle() -> AttributedString {
         var attributedString = AttributedString("Currency List")
         let font = Font.body
@@ -52,6 +56,7 @@ struct CurrencyListView: View {
     }
 }
 
+// MARK: - Preview
 struct CurrencyListView_Previews: PreviewProvider {
     static var previews: some View {
         CurrencyListView().environmentObject(CurrencyListViewModel())
