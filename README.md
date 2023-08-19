@@ -36,8 +36,10 @@ Offline Access: No internet connection? No problem. The app retains your recent 
 
   ## Overview
 | Currency List | Wallet | Bids|
+| Currency List | Wallet | Bids |
 |:------:|:--------:|:--------:|
-|![list](https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/3ace6e2f-f0bd-412c-bfd0-b2c7ee0e8058) |![wallet](https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/24e28ae2-c0d5-454e-91a3-c822cc19366f) |![bids](https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/1e02b8cc-e6dd-4757-ab9a-3a67b1a9c74b) |
+| <img src="https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/3ace6e2f-f0bd-412c-bfd0-b2c7ee0e8058" width="300"> | <img src="https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/24e28ae2-c0d5-454e-91a3-c822cc19366f" width="300"> | <img src="https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/1e02b8cc-e6dd-4757-ab9a-3a67b1a9c74b" width="300"> |
+
 
 
 ## Requirements
