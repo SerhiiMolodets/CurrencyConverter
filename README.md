@@ -3,7 +3,7 @@
 ![CurrencyConverter](https://github.com/SerhiiMolodets/CurrencyConverter/assets/108882250/3e34ec54-051e-49d7-ae18-0dec5f11c27d)
 
 
-Elevate your financial interactions with our powerful Currency Converter App. Seamlessly designed to empower users with real-time currency conversions, a multi-currency wallet, and a comprehensive history of conversion transactions, our app redefines how you manage and understand international currencies.
+Elevate your financial interactions with Currency Converter App. Seamlessly designed to empower users with real-time currency conversions, a multi-currency wallet, and a comprehensive history of conversion transactions, our app redefines how you manage and understand international currencies.
 
 ## Сontents
 * [Overview](#overview)
